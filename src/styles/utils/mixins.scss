@@ -1,4 +1,25 @@
+:root {
+	--rem-font: 16px;
+	font-size: var(--rem-font);
+
+}
+
 @mixin container {
 	max-width: 2560px;
 	margin-top: 0 auto;
 }
+
+// @function clampFont($minWidthPx, $maxWidthPx, $minFontSize, $maxFontSize) {
+// 	$pixelsPerRem: var(--rem-font);
+
+// 	$minWidth: $minWidthPx / $pixelsPerRem;
+// 	$maxWidth: $maxWidthPx / $pixelsPerRem;
+
+// 	$maxFontSizeRem: $maxFontSize/var(--rem-font);
+// 	$minFontSizeRem: $minFontSize/var(--rem-font);
+
+// 	$slope: ($maxFontSizeRem - $minFontSizeRem) / ($maxWidth - $minWidth);
+// 	$yAxisIntersection: -$minWidth * $slope +$minFontSizeRem;
+
+// 	@return clamp(#{ $minFontSize }rem, #{ $yAxisIntersection }rem + #{ $slope * 100 }vw, #{ $maxFontSize }rem);
+// }
