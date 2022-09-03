@@ -1,0 +1,56 @@
+.projectChanger {
+	margin-bottom: 56px;
+	&__btns {
+		display: flex;
+		@media screen and (max-width: 500px) {
+			display: flex;
+			flex-wrap: wrap;
+		}
+	}
+	&__btn {
+		padding: 10px 27px;
+		border-radius: 60px;
+		border: 1px solid $c-silver;
+		display: block;
+
+		background-color: $c-white;
+
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 150%;
+		letter-spacing: -0.01em;
+		color: #909090;
+
+		transition: all .3s;
+		
+		cursor: pointer;
+
+		&:not(:last-child) {
+			margin-right: 10px;
+		}
+
+		&:hover {
+			background-color: $c-hoverGreen;
+			color: $c-white;
+			border-color: transparent;
+		}
+
+		&:last-child {
+			@media screen and (max-width: 500px) {
+				margin-top: 10px;
+			}
+		}
+		
+		&:nth-child(2) {
+			@media screen and (max-width: 347px) {
+				margin-top: 10px;
+			}
+		}
+
+		&--active {
+			background-color: $c-accentGreen;
+			color: $c-white;
+			border-color: transparent;
+		}
+	}
+}

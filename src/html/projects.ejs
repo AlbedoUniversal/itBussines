@@ -1,0 +1,428 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Intime</title>
+</head>
+<body>
+	<div id="main">
+		
+		<!------ HEADER START ------>
+		<header class="header">
+			<div class="header__items">
+				<div class="header__items-left">
+					<div class="logo">
+						<a class="logo__link" target="_self" href="/">
+							<img class="logo__img" src="../assets/icons/logo.svg"/>
+						</a>
+					</div>
+				</div>
+				<div class="header__items-midle">
+					<nav class="menu">
+						<ul class="menu__list-upper">
+							<li class="menu__list-item"><a href="/" class="menu__list-link">Главная</a></li>
+							<li class="menu__list-item"><a href="" class="menu__list-link">Проекты</a>
+								<!-- <ul class="menu__list-average">
+									<li class="menu__list-item"><a href="#" class="menu__list-link">Жилые здания</a>
+										<ul class="menu__list-lower">
+											<li class="menu__list-item"><a href="#" class="menu__list-link">Квартиры</a></li>
+											<li class="menu__list-item"><a href="#" class="menu__list-link">Котеджи</a></li>
+										</ul>
+									</li>
+									<li class="menu__list-item"><a href="#" class="menu__list-link">Дизайн</a></li>
+									<li class="menu__list-item"><a href="#" class="menu__list-link">Все проекты</a>
+										<ul class="header__menu-list-lower">
+											<li class="menu__list-item"><a href="#" class="menu__list-link">HTML</a></li>
+											<li class="menu__list-item"><a href="#" class="menu__list-link">CSS</a></li>
+										</ul>
+									</li>
+								</ul> -->
+							</li>
+							<li class="menu__list-item"><a href="/company.html" class="menu__list-link">Компания</a>
+								<!-- <ul class="header__menu-list-average">
+									<li class="menu__list-item"><a href="#" class="menu__list-link">Web Design</a></li>
+									<li class="menu__list-item"><a href="#" class="menu__list-link">User Experience</a></li>
+								</ul> -->
+							</li>
+							<li class="menu__list-item"><a href="/contacts.html" class="menu__list-link">Контакты</a></li>
+							<!-- <li class="menu__list-item"><a href="#" class="menu__list-link">8-999-99-99</a></li> -->
+						</ul>
+					</nav>
+				</div>
+				<div class="header__items-right">
+					<div class="call">
+						<a class="call__number" href="tel:+79054809041">+7 905 480-90-41</a>
+						<a class="call__decor" href="tel:+79054809041">
+							<img class="call__icon" src="../assets/icons/phone.svg" alt="phone" />
+						</a>
+					</div>
+
+
+					<nav class="menu-mobile">
+						<input type="checkbox" class="menu-mobile__opener" id="mobile-menu-opener"/>
+						<label class="menu-mobile__label" for="mobile-menu-opener">
+							<span class="menu-mobile__icon"></span>
+						</label>
+						<ul class="menu-mobile__list-upper">
+							<li class="menu-mobile__list-item"><a href="/" class="menu-mobile__list-link">Главная</a></li>
+							<li class="menu-mobile__list-item"><a href="" class="menu-mobile__list-link">Проекты</a>
+								<!-- <ul class="menu-mobile__list-average">
+										<li class="menu-mobile__list-item"><a href="#" class="menu-mobile__list-link">Жилые здания</a>
+										<ul class="menu-mobile__list-lower">
+											<li class="menu-mobile__list-item"><a href="#" class="menu-mobile__list-link">Квартиры</a></li>
+											<li class="menu-mobile__list-item"><a href="#" class="menu-mobile__list-link">Котеджи</a></li>
+										</ul> 
+									</li>
+									<li class="menu-mobile__list-item"><a href="#" class="menu-mobile__list-link">Дизайн</a></li>
+									<li class="menu-mobile__list-item"><a href="#" class="menu-mobile__list-link">Все проекты</a>
+											<ul class="header__menu-list-lower">
+											<li class="menu__list-item"><a href="#" class="menu__list-link">HTML</a></li>
+											<li class="menu__list-item"><a href="#" class="menu__list-link">CSS</a></li>
+										</ul>
+									</li>
+								</ul> -->
+							</li>
+							<li class="menu-mobile__list-item"><a href="/company.html" class="menu-mobile__list-link">Компания</a>
+								<!-- <ul class="header__menu-list-average">
+									<li class="menu__list-item"><a href="#" class="menu__list-link">Web Design</a></li>
+									<li class="menu__list-item"><a href="#" class="menu__list-link">User Experience</a></li>
+								</ul> -->
+							</li>
+							<li class="menu-mobile__list-item"><a href="/contacts.html" class="menu-mobile__list-link">Контакты</a></li>
+							<!-- <li class="menu-mobile__list-item"><a href="#" class="menu-mobile__list-link">18-999-99-99</a></li> -->
+						</ul>
+						<div class="menu-mobile__list-upper-overlay"></div>
+					</nav>
+
+
+
+
+					<div class="form">
+						<input type="checkbox" class="form__opener" id="form-opener"/>
+						<label class="form__label" for="form-opener">
+							<span class="form__icon"></span>
+						</label>
+						<div class="form__post">
+							<div class="form__text">
+								<p class="form__heading">Написать нам</p>
+								<p class="form__subheading">Оставьте заявку и мы с вами свяжемся в ближайшее время</p>
+							</div>
+							<form  class="feedback__form" action="" method="post" name="form">
+		
+								<!-- Поле ввода имени -->
+								<div class="form__act-box">
+									<input
+										class="form__name"
+										name="name"
+										title="Invalid email address"
+										required
+										type="text"
+										placeholder="Ваше имя"
+										minlength="1"
+									/>
+									<span class="form__required">*</span>
+								</div>
+		
+								<!-- Поле ввода почты  -->
+								<div class="form__act-box">
+									<input
+										class="form__email"
+										name="email"
+										id="email"
+										required
+										pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+										type="email"
+										placeholder="Электронная почта"
+									/>
+									<span class="form__required">*</span>
+								</div>
+								<!-- Текстовое поле для самого сообщения -->
+								<textarea class="form__message" name="message" placeholder="Обращение"></textarea>
+								<!-- Кнопка с надписью «Отправить», которая запускает обработчик формы -->
+								<div class="form__form-bottom">
+									<span class="form__form-bottom-text">Нажимая на кнопку “Отправить” я даю согласие на обработку персональных данных</span>
+									<input  class="form__form-bottom-btn" type="submit" value="Отправить" />
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!------ HEADER END ------>
+
+		<!------ PROJECT START ------>
+		<section class="project">
+			<div class="info-block info-block--withoutBorder">
+				<div class="info-block__left">
+					<div class="info-block__heading">
+						<p class="info-block__heading-text">
+							Проекты
+						</p>
+					</div>
+				</div>
+				<div class="info-block__right">
+					<div class="info-block__desc">
+						<p class="info-block__desc-text">
+							Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!------ PROJECT END ------>
+
+		<!------ PROJECT CHANGER START ------>
+		<section class="projectChanger">
+			<div class="projectChanger__btns">
+				<a class="projectChanger__btn" target="_self" href="">Все</a>
+				<a class="projectChanger__btn" target="_self" href="/complexes.html">Жилые комплексы</a>
+				<a class="projectChanger__btn" target="_self" href="/interiors.html">Интерьеры</a>
+			</div>
+		</section>
+		<!------ PROJECT CHANGER  END ------>
+
+		<!------ PROJECT CHANGER START ------>
+		<section class="gallery gallery--mb">
+			<div class="grid">
+				<div class="grid__box grid__box--small">
+					<a href="/project.html" target="_blank" rel="noopener noreferrer" class="grid__box-link">
+						<div class="grid__box-item">
+							<div class="grid__box-decor grid__box-decor--small">
+								<img src="../assets/images/bigtime.png" class="grid__box-img" alt="build" />
+							</div>
+							<div class="grid__box-info">
+								<div class="grid__box-heading">Big time</div>
+								<div class="grid__box-subheading">2017 ∙ 65 000 м&sup2;</div>
+							</div>
+						</div>
+					</a>
+					<a href="/project.html" target="_blank" rel="noopener noreferrer" class="grid__box-link">
+						<div class="grid__box-item">
+							<div class="grid__box-decor grid__box-decor--small">
+								<img src="../assets/images/triniti.png" class="grid__box-img" alt="build" />
+							</div>
+							<div class="grid__box-info">
+								<div class="grid__box-heading">Тринити-2</div>
+								<div class="grid__box-subheading">2020 ∙ 87 400 м&sup2;</div>
+							</div>
+						</div>
+					</a>
+					<a href="/project.html" target="_blank" rel="noopener noreferrer" class="grid__box-link">
+						<div class="grid__box-item">
+							<div class="grid__box-decor grid__box-decor--small">
+								<img src="../assets/images/myak.png" class="grid__box-img" alt="build" />
+							</div>
+							<div class="grid__box-info">
+								<div class="grid__box-heading">Маяковский</div>
+							<div class="grid__box-subheading">2018 ∙ 108 000 м&sup2;</div>
+						</div>
+						</div>
+					</a>
+					<a href="/project.html" target="_blank" rel="noopener noreferrer" class="grid__box-link">
+						<div class="grid__box-item">
+							<div class="grid__box-decor grid__box-decor--small">
+								<img src="../assets/images/now.png" class="grid__box-img" alt="build" />
+							</div>
+							<div class="grid__box-info">
+								<div class="grid__box-heading">Квартал на набережной now</div>
+								<div class="grid__box-subheading">2019 ∙ 174 0000 м&sup2;</div>
+							</div>
+						</div>
+					</a>
+					<a href="/project.html" target="_blank" rel="noopener noreferrer" class="grid__box-link">
+						<div class="grid__box-item">
+							<div class="grid__box-decor grid__box-decor--small">
+								<img src="../assets/images/gardern.png" class="grid__box-img" alt="build" />
+							</div>
+							<div class="grid__box-info">
+								<div class="grid__box-heading">Комплекс "ФИЛИ ГАРДЕН"</div>
+								<div class="grid__box-subheading">2020 ∙ 10 92 м&sup2;</div>
+							</div>
+						</div>
+					</a>
+					<a href="/project.html" target="_blank" rel="noopener noreferrer" class="grid__box-link">
+						<div class="grid__box-item">
+							<div class="grid__box-decor grid__box-decor--small">
+								<img src="../assets/images/b7.jpeg" class="grid__box-img" alt="build" />
+							</div>
+							<div class="grid__box-info">
+								<div class="grid__box-heading">Комплекс "ФИЛИ ГАРДЕН"</div>
+								<div class="grid__box-subheading">2020 ∙ 10 92 м&sup2;</div>
+							</div>
+						</div>
+					</a>
+					<a href="/project.html" target="_blank" rel="noopener noreferrer" class="grid__box-link">
+						<div class="grid__box-item">
+							<div class="grid__box-decor grid__box-decor--small">
+								<img src="../assets/images/b6.jpeg" class="grid__box-img" alt="build" />
+							</div>
+							<div class="grid__box-info">
+								<div class="grid__box-heading">Комплекс "ФИЛИ ГАРДЕН"</div>
+								<div class="grid__box-subheading">2020 ∙ 10 92 м&sup2;</div>
+							</div>
+						</div>
+					</a>
+					<a href="/project.html" target="_blank" rel="noopener noreferrer" class="grid__box-link">
+						<div class="grid__box-item">
+							<div class="grid__box-decor grid__box-decor--small">
+								<img src="../assets/images/b8.jpeg" class="grid__box-img" alt="build" />
+							</div>
+							<div class="grid__box-info">
+								<div class="grid__box-heading">Комплекс "ФИЛИ ГАРДЕН"</div>
+								<div class="grid__box-subheading">2020 ∙ 10 92 м&sup2;</div>
+							</div>
+						</div>
+					</a>
+					<a href="/project.html" target="_blank" rel="noopener noreferrer" class="grid__box-link">
+						<div class="grid__box-item">
+							<div class="grid__box-decor grid__box-decor--small">
+								<img src="../assets/images/b9.jpeg" class="grid__box-img" alt="build" />
+							</div>
+							<div class="grid__box-info">
+								<div class="grid__box-heading">Комплекс "ФИЛИ ГАРДЕН"</div>
+								<div class="grid__box-subheading">2020 ∙ 10 92 м&sup2;</div>
+							</div>
+						</div>
+					</a>
+					<a href="/project.html" target="_blank" rel="noopener noreferrer" class="grid__box-link">
+						<div class="grid__box-item">
+							<div class="grid__box-decor grid__box-decor--small">
+								<img src="../assets/images/tver.png" class="grid__box-img" alt="build" />
+							</div>
+							<div class="grid__box-info">
+								<div class="grid__box-heading">Комплекс "ФИЛИ ГАРДЕН"</div>
+								<div class="grid__box-subheading">2020 ∙ 10 92 м&sup2;</div>
+							</div>
+						</div>
+					</a>
+					<a href="/project.html" target="_blank" rel="noopener noreferrer" class="grid__box-link">
+						<div class="grid__box-item">
+							<div class="grid__box-decor grid__box-decor--small">
+								<img src="../assets/images/raz.png" class="grid__box-img" alt="build" />
+							</div>
+							<div class="grid__box-info">
+								<div class="grid__box-heading">Комплекс "ФИЛИ ГАРДЕН"</div>
+								<div class="grid__box-subheading">2020 ∙ 10 92 м&sup2;</div>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+		</section>
+		<!------ PROJECT CHANGER  END ------>
+
+		<!------ FEEDBACK START ------>
+		<section class="feedback">
+			<div class="feedback__paragraph">
+				<div class="feedback__paragraph-heading">
+					<span class="feedback__paragraph-heading-text">Обратная связь</span>
+				</div>
+				<div class="feedback__paragraph-subheading">
+					<span class="feedback__paragraph-subheading-text">Оставьте заявку и мы с вами свяжемся в ближайшее время</span>
+				</div>
+			</div>
+			<div class="feedback__post">
+				<form  class="feedback__form" action="" method="post" name="form">
+
+					<!-- Поле ввода имени -->
+					<div class="feedback__act-box">
+						<input
+							class="feedback__name"
+							name="name"
+							title="Invalid email address"
+							required
+							type="text"
+							placeholder="Ваше имя"
+							minlength="1"
+						/>
+						<span class="feedback__required">*</span>
+					</div>
+
+					<!-- Поле ввода почты  -->
+					<div class="feedback__act-box">
+						<input
+							class="feedback__email"
+							name="email"
+							id="email"
+							required
+							pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+							type="email"
+							placeholder="Электронная почта"
+						/>
+						<span class="feedback__required">*</span>
+					</div>
+					<!-- Текстовое поле для самого сообщения -->
+					<textarea class="feedback__message" name="message" placeholder="Обращение"></textarea>
+					<!-- Кнопка с надписью «Отправить», которая запускает обработчик формы -->
+					<div class="feedback__form-bottom">
+						<span class="feedback__form-bottom-text">Нажимая на кнопку “Отправить” я даю согласие на обработку персональных данных</span>
+						<input  class="feedback__form-bottom-btn" type="submit" value="Отправить" />
+					</div>
+				</form>
+			</div>
+		</section>
+		<!------ FEEDBACK END ------>
+	</div>
+	<!------ FOOTER START ------>
+	<footer class="footer">
+		<div class="footer__container">
+			<div class="footer__about">
+				<div class="footer__about-left">
+					<div class="logo logo--footer">
+						<a class="logo__link" target="_self" href="/">
+							<img class="logo__img" src="../assets/icons/logo-white.svg"/>
+						</a>
+					</div>
+					<div class="footer__menu">
+						<ul class="footer__menu-list">
+							<li class="footer__menu-item">
+								<a class="footer__menu-link" href="">Проекты</a>
+							</li>
+							<li class="footer__menu-item">
+								<a class="footer__menu-link" href="/company.html">Компания</a>
+							</li>
+							<li class="footer__menu-item">
+								<a class="footer__menu-link" href="">Услуги</a>
+							</li>
+							<li class="footer__menu-item">
+								<a class="footer__menu-link" href="/contacts.html">Контакты</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="footer__about-right">
+					<div class="footer__phone">
+						<a class="footer__phone-link" href="tel:+74997144043">+7 499 714-40-43</a>
+					</div>
+					<div class="footer__address">
+						<p class="footer__address-text">
+							127015, ул. Новодмитровская, д.2, корпус
+						</p>
+						<p class="footer__address-text">
+							1 БЦ «Савеловский Сити»
+						</p>
+					</div>
+					<div class="footer__mail">
+						<a class="footer__mail-link" href="mailto:info@sob.ru">info@sob.ru</a>
+					</div>
+				</div>
+				
+			</div>
+			<div class="footer__copyright">
+				<div class="footer__copyright-defer">
+					<a href="" class="footer__copyright-link">© Все права защищены</a>
+				</div>
+				<div class="footer__copyright-more">
+					<a href="" class="footer__copyright-link">Условия пользования</a>
+					<a href="" class="footer__copyright-link">Политика приватности</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!------ FOOTER END ------>
+</body>
+</html>

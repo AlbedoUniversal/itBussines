@@ -1,0 +1,15 @@
+const sliderMore = tns({
+	container: '.slider-down',
+	items: 1,
+	slideBy: 'page',
+	mouseDrag: true,
+	swipeAngle: false,
+	speed: 400,
+	autoWidth: true,
+	gutter: 30,
+	controls: true,
+	nav: false,
+	controlsContainer: '#controls',
+	prevButton: '.more-slider-down__previous',
+	nextButton: '.more-slider-down__next',
+});
