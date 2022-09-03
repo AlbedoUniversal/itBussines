@@ -1,0 +1,12 @@
+//Globals
+@import "./globals/vars";
+@import "./globals/funcs";
+@import "./globals/mixins";
+@import "./globals/reset";
+@import "./globals/base";
+
+//compns
+@import "./components/*";
+
+//Sections
+@import "./blocks/*";
