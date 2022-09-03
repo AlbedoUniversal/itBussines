@@ -19,19 +19,11 @@ const devMode = process.env.NODE_ENV !== "production";
 const putFilesToDist = (folder) =>
   devMode ? `${folder}/[name][ext]` : `${folder}/[name].[contenthash][ext]`;
 
-const pages = [
-  "index",
-  "company",
-  "contacts",
-  "projects",
-  "complexes",
-  "interiors",
-  "project",
-];
+const pages = ["index"];
 
 const htmlPages = pages.map((page) => {
   return new HtmlWebpackPlugin({
-    template: `${PATHS.src}/html/${page}.ejs`,
+    template: `${PATHS.src}/html/${page}.html`,
     filename: `./${page}.html`, // './index.html' - devServer, 'html/index.html' - build // devMode ? './index.html' : 'html/index.html',
     favicon: `${PATHS.src}/assets/icons/favicon.svg`,
   });
@@ -44,7 +36,7 @@ const plugins = [
     chunkFilename: "[name].css",
   }),
   new HtmlWebpackPlugin({
-    template: `${PATHS.src}/html/index.ejs`,
+    template: `${PATHS.src}/html/index.html`,
     filename: "./index.html", // './index.html' - devServer, 'html/index.html' - build // devMode ? './index.html' : 'html/index.html',
     favicon: `${PATHS.src}/assets/icons/favicon.svg`,
   }),
@@ -102,14 +94,11 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.ejs$/i,
+        test: /\.html$/i,
         use: [
           {
             loader: "html-loader",
             options: { minimize: false },
-          },
-          {
-            loader: "template-ejs-loader",
           },
         ],
       },
