@@ -1,0 +1,64 @@
+.processBlock {
+	padding: 150px 0;
+	border: 2px solid rgb(8, 212, 134);
+	background-image: url('@img/background.jpg');
+	background-size: cover;
+	&__heading {
+		font-size: 4.6rem;
+		font-weight: 900;
+		line-height: 1.262;
+		color: #ffffff;
+		text-transform: uppercase;
+		text-align: center;
+		margin-bottom: 208px;
+	}
+	&__road {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: stretch;
+		gap: 4.875rem;
+	}
+
+	&__road-item {
+		flex: 0 1 33%;
+		max-width: 450px;
+		&:not(:last-child) {
+			.processBlock__road-number:after {
+				position: absolute;
+				content: '';
+				width: 80%;
+				height: 20px;
+				top: 50%;
+				left: 35%;
+				background-repeat: repeat;
+				background-size: 90px 21px;
+				background-image: radial-gradient(circle, #ffffff 5px, transparent 3px);
+			}
+		}
+	}
+	&__road-number {
+		font-weight: 700;
+		font-size: 250px;
+		line-height: 310px;
+		text-transform: uppercase;
+
+		color: #ffffff;
+		position: relative;
+	}
+	&__road-heading {
+		font-weight: 900;
+		font-size: 30px;
+		line-height: 38px;
+		text-transform: uppercase;
+
+		color: #ffffff;
+	}
+	&__road-description {
+		font-weight: 500;
+		font-size: 25px;
+		line-height: 30px;
+
+		color: #ffffff;
+	}
+}
