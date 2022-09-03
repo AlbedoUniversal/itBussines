@@ -3,3 +3,9 @@
 @import './utils/mixins.scss';
 
 @import './components/formAndFooter.scss';
+@import './sections/lanitBlock.scss';
+
+section {
+	max-width: 1400px;
+	margin: 0 auto;
+}
