@@ -2,3 +2,9 @@
 @import './utils/style.scss';
 
 @import './components/form.scss';
+@import './sections/lanitBlock.scss';
+
+section {
+	max-width: 1400px;
+	margin: 0 auto;
+}
