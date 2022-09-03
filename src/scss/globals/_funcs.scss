@@ -1,7 +1,32 @@
-@function get-theme-color($key) {
-  @return map-get($theme-colors, $key);
+// @function get-theme-color($key) {
+// 	@return map-get($theme-colors, $key);
+// }
+
+// @function get-spacer($key) {
+// 	@return map-get($spacers, $key);
+// }
+
+$rootFontSize: 16px;
+
+/*Функция будет работать с единицами измерения, отличными от px, но $min-width и $max-width должны быть одинаковыми, а $size-at-min-width и $size-at-max-width будут должны быть одинаковые единицы.
+https://dev.to/christianmay21/easy-css-clamp-scss-mixin-1225
+\*/
+
+@function clamp-calc($min-width, $max-width, $size-at-min-width, $size-at-max-width) {
+	$slope: ($size-at-max-width - $size-at-min-width) / ($max-width - $min-width);
+
+	$y-axis-intersection: -1 * $min-width * $slope +$size-at-min-width;
+
+	$return-value: clamp(#{$size-at-min-width}, #{$y-axis-intersection} + #{$slope} * 100vw, #{$size-at-max-width});
+
+	@return $return-value;
 }
 
-@function get-spacer($key) {
-  @return map-get($spacers, $key);
+@mixin fluid-type($min-vw, $max-vw, $min-value, $max-value) {
+
+	$factor: 1 / ($max-vw - $min-vw) * ($max-value - $min-value);
+
+	$calc-value: unquote('#{ $min-value - ($min-vw * $factor) } + #{ 100vw * $factor }');
+
+	font-size: clamp(#{if($min-value > $max-value, $max-value, $min-value)}, #{$calc-value}, #{if($min-value > $max-value, $min-value, $max-value)});
 }
