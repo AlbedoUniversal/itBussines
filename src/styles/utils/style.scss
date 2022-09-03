@@ -8,13 +8,13 @@ html {
 	height: 100%;
 
 	@media screen and (max-width: $desktopWidth) {
-			font-size: 16px;
+		font-size: 16px;
 	}
 
 	@media screen and (max-width: $tableWidth) {
 		font-size: 15px;
 	}
-	
+
 	@media screen and (max-width: $phoneWidth) {
 		font-size: 14px;
 	}
@@ -28,9 +28,6 @@ body {
 	font-weight: $mainFontWeight;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-
-	// position: relative;
-
 	overflow-x: hidden;
 
 }
@@ -53,6 +50,7 @@ h6 {
 a {
 	text-decoration: none;
 }
+
 p,
 ul,
 li {
@@ -62,21 +60,21 @@ li {
 }
 
 input:-webkit-autofill,
-input:-webkit-autofill:hover, 
-input:-webkit-autofill:focus, 
-input:-webkit-autofill:active  {
-  transition: background-color 5000s;
-//   -webkit-text-fill-color: #fff !important;
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+	transition: background-color 5000s;
+	//   -webkit-text-fill-color: #fff !important;
 }
 
 .form__name,
 .form__email,
 .form__message {
+
 	&:-webkit-autofill,
-	&:-webkit-autofill:hover, 
-	&:-webkit-autofill:focus, 
+	&:-webkit-autofill:hover,
+	&:-webkit-autofill:focus,
 	&:-webkit-autofill:active {
-		  -webkit-text-fill-color: $c-white !important;
+		-webkit-text-fill-color: $c-white  !important;
 	}
 }
-
