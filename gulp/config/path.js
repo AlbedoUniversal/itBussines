@@ -1,8 +1,8 @@
-import * as nodePath from 'path';
+import * as nodePath from "path";
 
 const rootFolder = nodePath.basename(nodePath.resolve());
-const srcPath = 'src';
-const destPath = 'dist';
+const srcPath = "src";
+const destPath = "dist";
 
 const path = {
   src: {
@@ -12,7 +12,7 @@ const path = {
     js: `${srcPath}/js/scripts.js`,
     images: `${srcPath}/assets/images/**/*.*`,
     svg: `${srcPath}/assets/svg/**/*.*`,
-    fonts: `${srcPath}/assets/fonts/*.ttf`,
+    fonts: `${srcPath}/assets/fonts/*.woff2`,
   },
   watch: {
     html: `${srcPath}/html/**/*.html`,
