@@ -56,7 +56,7 @@
 			background-color: #ffffff;
 
 			&:not(:target) ~ .tabs__links > a[href='#content-1'] {
-				color: red;
+				background-color: #0f6fbe;
 			}
 		}
 	}
@@ -66,7 +66,8 @@
 	.tabs > #content-4:target,
 	.tabs > #content-5:target {
 		& ~ .tabs__links > a[href='#content-1'] {
-			color: green !important;
+			background-color: #ffffff !important;
+			// color: green !important;
 		}
 	}
 
