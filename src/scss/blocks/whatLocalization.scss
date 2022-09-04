@@ -1,5 +1,9 @@
 .whatLocalization {
 	@include container;
+	// padding-top: fluid(60, 261);
+	// padding-bottom: fluid(180, 400);
+	padding-right: fluid(90, 339);
+	padding-left: fluid(90, 339);
 	&__content {
 		display: flex;
 		justify-content: center;
@@ -152,5 +156,29 @@
 		background: #01d1ff;
 		border-radius: 20px;
 		width: 100%;
+		padding: fluid(40, 91);
+		@include font(fluid(20, 25), 500, 1.22, #ffffff);
+	}
+	&__text-sub {
+		margin-bottom: 0;
+	}
+	&__list {
+		margin: 0;
+		padding-left: 20px;
+	}
+	&__list-item {
+		margin: 0;
+		position: relative;
+
+		&:before {
+			width: 11px;
+			height: 11px;
+			background-color: #ffffff;
+			position: absolute;
+			content: '';
+			border-radius: 100%;
+			left: -18px;
+			top: 3px;
+		}
 	}
 }
