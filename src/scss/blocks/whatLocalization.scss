@@ -71,9 +71,9 @@
 		}
 	}
 
-	// .tabs > #content-1:target ~ .tabs__links > a[href='#content-1'] {
-	// 	background-color: #0f6fbe;
-	// }
+	.tabs > #content-1:target ~ .tabs__links > a[href='#content-1'] {
+		background-color: #0f6fbe;
+	}
 
 	// .tabs > #content-1:not(:target) ~ .tabs__links > a[href='#content-1'] {
 	// 	background-color: #0f6fbe;
