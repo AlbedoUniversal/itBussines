@@ -3,7 +3,18 @@
 	background-image: url('@img/webp/formBg.webp');
 }
 
-.consult__heading {
-	@include font(35, 60);
-	color: white;
+.consult {
+	@include container;
+	padding-top: fluid(60, 261);
+	padding-bottom: fluid(180, 400);
+	padding-right: fluid(75, 321);
+	padding-left: fluid(75, 339);
+
+
+	&__heading {
+		@include font(fluid(35, 75), 900, 1.44, white);
+		text-transform: uppercase;
+		text-align: center;
+		margin-bottom: fluid(118, 177);
+	}
 }
