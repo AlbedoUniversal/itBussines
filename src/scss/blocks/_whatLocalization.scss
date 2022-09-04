@@ -10,11 +10,11 @@
 }
 
 .whatLocalization {
-	@include container;
 	padding-top: fluid(31, 100);
 	padding-bottom: fluid(130, 220);
 	padding-right: fluid(90, 339);
 	padding-left: fluid(90, 339);
+	@include container;
 	&__content {
 		display: flex;
 		justify-content: center;
@@ -33,6 +33,9 @@
 		display: flex;
 		flex-direction: row;
 		gap: fluid(43, 53);
+		@media screen and (max-width: 991px) {
+			gap: fluid(20, 40);
+		}
 	}
 
 	&__tabs {
@@ -77,8 +80,19 @@
 
 		transition: background-color 0.3s;
 
+		@media screen and (max-width: 1450px) {
+			font-size: 18px;
+		}
+
 		&:hover {
 			background-color: #dddddd;
+		}
+
+		@media screen and (max-width: 1600px) {
+			padding-top: fluid(20, 39);
+			padding-bottom: fluid(20, 39);
+			padding-right: fluid(10, 22);
+			padding-left: fluid(21, 50);
 		}
 	}
 
@@ -93,6 +107,18 @@
 
 		&:before {
 			background-color: transparent;
+		}
+
+		@media screen and (max-width: 1600px) {
+			width: 30px;
+			height: 30px;
+			margin-left: 40px;
+		}
+
+		@media screen and (max-width: 1450px) {
+			// width: 30px;
+			// height: 30px;
+			margin-left: 0px;
 		}
 	}
 
@@ -124,6 +150,10 @@
 							top: 0;
 							bottom: 0;
 							margin: auto;
+							@media screen and (max-width: 1600px) {
+								width: 14px;
+								height: 14px;
+							}
 						}
 					}
 				}
@@ -143,6 +173,11 @@
 					top: 0;
 					bottom: 0;
 					margin: auto;
+
+					@media screen and (max-width: 1600px) {
+						width: 14px;
+						height: 14px;
+					}
 				}
 			}
 		}
@@ -166,6 +201,10 @@
 				top: 0;
 				bottom: 0;
 				margin: auto;
+				@media screen and (max-width: 1600px) {
+					width: 14px;
+					height: 14px;
+				}
 			}
 		}
 	}
