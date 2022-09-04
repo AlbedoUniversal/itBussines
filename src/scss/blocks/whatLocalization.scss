@@ -1,7 +1,18 @@
+@keyframes showText {
+	0% {
+		opacity: 0;
+		transform: translateX(50%);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
 .whatLocalization {
 	@include container;
-	// padding-top: fluid(60, 261);
-	// padding-bottom: fluid(180, 400);
+	padding-top: fluid(31, 100);
+	padding-bottom: fluid(130, 220);
 	padding-right: fluid(90, 339);
 	padding-left: fluid(90, 339);
 	&__content {
@@ -235,5 +246,9 @@
 			left: -18px;
 			top: 3px;
 		}
+	}
+
+	&__anim-box {
+		animation: showText 1s forwards;
 	}
 }
