@@ -1,20 +1,39 @@
+$font-family-main: Gilroy, Helvetica, sans-serif;
+$content-width: 2560px;
+
 @mixin container {
-	max-width: 2560px;
+	max-width: $content-width;
 	margin: 0 auto;
 }
 
-@mixin media-breakpoint-up($key) {
-	$min: map-get($grid-breakpoints-up, $key);
 
-	@media (min-width: $min) {
-		@content;
+@mixin font($size: 16px, $weight: false, $lh: false, $color: false) {
+	font-family: $font-family-main;
+
+
+
+	@if $size {
+		font-size: $size;
+	}
+
+
+	@if $weight {
+		font-weight: $weight;
+	}
+
+
+
+	@if $color {
+		color: $color;
+	}
+
+	@if $lh {
+		line-height: $lh;
 	}
 }
 
-@mixin media-breakpoint-down($key) {
-	$max: map-get($grid-breakpoints-down, $key);
-
-	@media (min-width: $max) {
+@mixin respond-above($breakpoint) {
+	@media (min-width: #{$breakpoint}px) {
 		@content;
 	}
 }

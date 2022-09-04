@@ -4,6 +4,6 @@
 }
 
 .consult__heading {
-	font-size: betterClamp(35, 60);
+	@include font(35, 60);
 	color: white;
 }

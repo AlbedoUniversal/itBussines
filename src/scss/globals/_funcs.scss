@@ -1,26 +1,5 @@
 @use "sass:math";
 
-/*
-Функция принимает минимальное и максимальное значение в пикселях. И предельные ширины экрана, между которыми размер будет линейно изменяться в замивисости от ширины. При выходу за эти границы применяться заданные значения
-*/
-@function betterClamp($minSize, $maxSize, $minWidth: 720, $maxWidth: 2560) {
-	// convert to rem
-	$minSize: math.div($minSize, 16);
-	$maxSize: math.div($maxSize , 16);
-	$maxWidth : math.div($maxWidth , 16);
-	$minWidth : math.div($minWidth , 16);
-	// do calculations
-	$slope: math.div(($maxSize - $minSize), ($maxWidth - $minWidth));
-	$yAxisIntersection: -$minWidth * $slope +$minSize;
-	$preferredValue: '#{decimal-round($yAxisIntersection,3)}rem + #{decimal-round(($slope*100),3) }vw';
-	// output as rem
-	$minSize: decimal-round($minSize, 3) * 1rem;
-	$maxSize: decimal-round($maxSize, 3) * 1rem;
-	@return clamp(#{$minSize}, #{$preferredValue}, #{$maxSize});
-}
-
-
-
 @function decimal-round ($number, $digits: 0, $mode: round) {
 	$n: 1;
 
@@ -63,4 +42,23 @@
 		@warn '#{ $mode } is undefined keyword.';
 		@return $number;
 	}
+}
+
+/*
+Функция принимает минимальное и максимальное значение в пикселях. И предельные ширины экрана, между которыми размер будет линейно изменяться в замивисости от ширины. При выходу за эти границы применяться заданные значения
+*/
+@function fluid($minSize, $maxSize, $minWidth: 720, $maxWidth: 2560) {
+	// convert to rem
+	$minSize: math.div($minSize, 16);
+	$maxSize: math.div($maxSize , 16);
+	$maxWidth : math.div($maxWidth , 16);
+	$minWidth : math.div($minWidth , 16);
+	// do calculations
+	$slope: math.div(($maxSize - $minSize), ($maxWidth - $minWidth));
+	$yAxisIntersection: -$minWidth * $slope +$minSize;
+	$preferredValue: '#{decimal-round($yAxisIntersection,3)}rem + #{decimal-round(($slope*100),3) }vw';
+	// output as rem
+	$minSize: decimal-round($minSize, 3) * 1rem;
+	$maxSize: decimal-round($maxSize, 3) * 1rem;
+	@return clamp(#{$minSize}, #{$preferredValue}, #{$maxSize});
 }
