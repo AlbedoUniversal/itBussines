@@ -1,4 +1,54 @@
 <section class="consult">
-  <h2 class="consult__heading">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</h2>
-  <form action="g"></form>
+  <div class="consult__container">
+    <h2 class="consult__heading">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</h2>
+    <form class="consult__form" id="form">
+      <div class="consult__in-half">
+        <input
+          class="consult__input"
+          name="name"
+          type="text"
+          placeholder="Имя*"
+        />
+        <input
+          class="consult__input"
+          name="surname"
+          type="text"
+          placeholder="Фамилия*"
+        />
+      </div>
+      <input
+        class="consult__input"
+        name="organization"
+        type="text"
+        placeholder="Название организации*"
+      />
+      <input
+        class="consult__input"
+        name="phone"
+        type="tel"
+        placeholder="Телефон*"
+      />
+      <input
+        class="consult__input"
+        name="email"
+        type="email"
+        placeholder="Электронная почта*"
+      />
+      <div class="consult__in-half">
+        <button class="consult__button" type="submit">отправить</button>
+        <label class="consult__checkbox-label">
+          <input
+            class="_visuallyhidden"
+            name="agreement"
+            value="yes"
+            type="checkbox"
+          />
+          <span class="consult__circle"></span>
+          <span class="consult__label-text"
+            >Согласен на обработку персональных данных</span
+          >
+        </label>
+      </div>
+    </form>
+  </div>
 </section>

@@ -8,9 +8,20 @@
 	display: flex;
 	justify-content: space-between;
 
-	&__credit {}
+	&__credit {
+		display: flex;
+		flex-direction: column;
 
-	&__info {}
+		@include respond-above('1800') {
+			flex-direction: row;
+		}
+	}
+
+	&__info {
+		@include respond-above('1800') {
+			flex-order: -1;
+		}
+	}
 
 	&__info-item {
 		@include font(fluid(10, 20), 500, 1.2, white);
@@ -22,11 +33,24 @@
 
 	&__contact {}
 
-	&__link-with-icon {}
+	&__link-with-icon {
+		display: flex;
+		gap: 25px;
+		align-items: center;
+		margin-bottom: 19px;
+	}
+
 
 	&__icon {}
 
-	&__link {}
+	&__link {
+		@include font(fluid(10, 20), 500, 1.2, white);
+
+		&--underline {
+			text-decoration: underline;
+		}
+	}
 
 	&__logo {}
+
 }
