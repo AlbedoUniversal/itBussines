@@ -24,6 +24,16 @@
 		gap: fluid(43, 53);
 	}
 
+	&__tabs {
+		& > #content-0 {
+			display: block;
+			background: #01d1ff;
+			border-radius: 20px;
+			width: 100%;
+			padding: fluid(40, 91);
+		}
+	}
+
 	&__links {
 		display: flex;
 		flex-direction: column;
@@ -87,6 +97,24 @@
 			&:first-child {
 				&:not(:target) ~ .whatLocalization__links > a[href='#content-1'] {
 					background-color: #01d1ff;
+					color: #ffffff;
+
+					& > .whatLocalization__mark {
+						border-color: #ffffff;
+						&:before {
+							position: absolute;
+							content: '';
+							width: 20px;
+							height: 20px;
+							background-color: #ffffff;
+							border-radius: 100%;
+							left: 0;
+							right: 0;
+							top: 0;
+							bottom: 0;
+							margin: auto;
+						}
+					}
 				}
 			}
 
@@ -105,17 +133,6 @@
 					bottom: 0;
 					margin: auto;
 				}
-			}
-		}
-	}
-
-	&__tabs {
-		& > #content-2:target,
-		& > #content-3:target,
-		& > #content-4:target,
-		& > #content-5:target {
-			& ~ .whatLocalization__links > a[href='#content-1'] {
-				background-color: #e9e9e9 !important;
 			}
 		}
 	}
@@ -142,6 +159,43 @@
 		}
 	}
 
+	&__tabs {
+		& > #content-2:target,
+		& > #content-3:target,
+		& > #content-4:target,
+		& > #content-5:target {
+			& ~ .whatLocalization__links > a[href='#content-1'] {
+				background-color: #e9e9e9 !important;
+				color: #aaaaaa !important;
+				& > .whatLocalization__mark {
+					border-color: #aaaaaa !important;
+					&:before {
+						position: absolute;
+						content: '';
+						width: 20px;
+						height: 20px;
+						background-color: transparent !important;
+						border-radius: 100%;
+						left: 0;
+						right: 0;
+						top: 0;
+						bottom: 0;
+						margin: auto;
+					}
+				}
+			}
+			& ~ #content-0 {
+				display: none;
+			}
+		}
+	}
+
+	&__tabs > #content-1:target {
+		& ~ #content-0 {
+			display: none;
+		}
+	}
+
 	&__tabs > div:not(.whatLocalization__links) {
 		display: none;
 		order: 1;
@@ -150,6 +204,7 @@
 
 	&__tabs > div:target {
 		display: block;
+		opacity: 1;
 	}
 
 	&__text {
