@@ -44,12 +44,39 @@
 		background-color: rgba(227, 242, 253, 0.3);
 	}
 
-	.tabs > #content-1:target ~ .tabs__links > a[href='#content-1'],
+	.tabs > #content-1,
 	.tabs > #content-2:target ~ .tabs__links > a[href='#content-2'],
-	.tabs > #content-3:target ~ .tabs__links > a[href='#content-3'] {
-		background-color: #bbdefb;
+	.tabs > #content-3:target ~ .tabs__links > a[href='#content-3'],
+	.tabs > #content-4:target ~ .tabs__links > a[href='#content-4'],
+	.tabs > #content-5:target ~ .tabs__links > a[href='#content-5'] {
+		background-color: #0f6fbe;
 		cursor: default;
+
+		&:first-child {
+			background-color: #ffffff;
+
+			&:not(:target) ~ .tabs__links > a[href='#content-1'] {
+				color: red;
+			}
+		}
 	}
+
+	.tabs > #content-2:target,
+	.tabs > #content-3:target,
+	.tabs > #content-4:target,
+	.tabs > #content-5:target {
+		& ~ .tabs__links > a[href='#content-1'] {
+			color: green !important;
+		}
+	}
+
+	// .tabs > #content-1:target ~ .tabs__links > a[href='#content-1'] {
+	// 	background-color: #0f6fbe;
+	// }
+
+	// .tabs > #content-1:not(:target) ~ .tabs__links > a[href='#content-1'] {
+	// 	background-color: #0f6fbe;
+	// }
 
 	.tabs > div:not(.tabs__links) {
 		display: none;
@@ -60,23 +87,12 @@
 	@media (min-width: 576px) {
 		.tabs {
 			flex-direction: row;
-
-			div:first-child {
-			}
 		}
 
 		.tabs__links {
 			flex-direction: column;
 			border: none;
 			box-shadow: none;
-
-			a:not(:target):first-child {
-				color: red;
-			}
-
-			a:first-child:not(:target) {
-				color: #0a0a0a;
-			}
 		}
 
 		.tabs__links > a {

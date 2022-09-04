@@ -1,0 +1,9 @@
+.wrapper {
+	background-color: rgb(58, 133, 190);
+	background-image: url('@img/webp/formBg.webp');
+}
+
+.consult__heading {
+	font-size: betterClamp(35, 60);
+	color: white;
+}
