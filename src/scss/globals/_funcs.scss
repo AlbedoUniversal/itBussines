@@ -1,4 +1,4 @@
-// @use "sass:math";
+@use "sass:math";
 
 @function decimal-round ($number, $digits: 0, $mode: round) {
 	$n: 1;

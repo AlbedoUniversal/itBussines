@@ -1,4 +1,5 @@
 .lanitBlock {
+	@include container;
 	padding-top: fluid(37, 116);
 	padding-bottom: fluid(194, 296);
 	padding-left: fluid(90, 339);
