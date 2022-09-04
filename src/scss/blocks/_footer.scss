@@ -1,0 +1,32 @@
+.footer {
+	@include container;
+
+	padding-bottom: fluid(53, 68);
+	padding-right: fluid(75, 321);
+	padding-left: fluid(75, 339);
+
+	display: flex;
+	justify-content: space-between;
+
+	&__credit {}
+
+	&__info {}
+
+	&__info-item {
+		@include font(fluid(10, 20), 500, 1.2, white);
+	}
+
+	&__info-item:not(:last-child) {
+		margin-bottom: fluid(16, 35);
+	}
+
+	&__contact {}
+
+	&__link-with-icon {}
+
+	&__icon {}
+
+	&__link {}
+
+	&__logo {}
+}
