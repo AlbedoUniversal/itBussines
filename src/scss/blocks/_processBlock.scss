@@ -6,6 +6,7 @@
 	background-image: url('@img/background.jpg');
 	background-size: cover;
 	@include container;
+
 	&__heading {
 		// font-size: clamp(clamp-calc());
 		font-size: 4.6rem;
@@ -16,6 +17,7 @@
 		text-align: center;
 		margin-bottom: 208px;
 	}
+
 	&__road {
 		display: flex;
 		flex-wrap: wrap;
@@ -27,6 +29,7 @@
 	&__road-item {
 		flex: 0 1 33%;
 		max-width: 450px;
+
 		&:not(:last-child) {
 			.processBlock__road-number:after {
 				position: absolute;
@@ -41,6 +44,7 @@
 			}
 		}
 	}
+
 	&__road-number {
 		font-weight: 700;
 		font-size: 250px;
@@ -50,6 +54,7 @@
 		color: #ffffff;
 		position: relative;
 	}
+
 	&__road-heading {
 		font-weight: 900;
 		font-size: 30px;
@@ -58,6 +63,7 @@
 
 		color: #ffffff;
 	}
+
 	&__road-description {
 		font-weight: 500;
 		font-size: 25px;
