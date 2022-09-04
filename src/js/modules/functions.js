@@ -1,1 +1,3 @@
-// export default function al() { alert('allett hello'); }
+export default function al() {
+	console.log('allett hello');
+}

@@ -1,6 +1,6 @@
 @mixin container {
 	max-width: 2560px;
-	margin-top: 0 auto;
+	margin: 0 auto;
 }
 
 @mixin media-breakpoint-up($key) {

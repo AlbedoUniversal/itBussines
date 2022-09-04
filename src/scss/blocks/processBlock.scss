@@ -1,9 +1,13 @@
+// @use '../globals/mixins';
+
 .processBlock {
 	padding: 150px 0;
 	border: 2px solid rgb(8, 212, 134);
 	background-image: url('@img/background.jpg');
 	background-size: cover;
+	@include container;
 	&__heading {
+		// font-size: clamp(clamp-calc());
 		font-size: 4.6rem;
 		font-weight: 900;
 		line-height: 1.262;
