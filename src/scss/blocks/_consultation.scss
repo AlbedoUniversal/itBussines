@@ -55,26 +55,6 @@
 		max-width: 100%;
 	}
 
-	&__input {
-		width: 100%;
-		display: block;
-		@include font (25px, 500, 1.2, white);
-		padding: 32px;
-		background-color: transparent;
-		border: 2px solid #FFFFFF;
-		border-radius: 80px;
-		outline: none;
-	}
-
-	&__input:focus {
-		outline: 2px solid white;
-		outline-offset: 3px;
-	}
-
-	&__input::placeholder {
-		@include font (25px, 500, 1.2, white);
-
-	}
 
 	&__button {
 		@include font (25px, 700, 1.2, #4B4B4B);
@@ -110,37 +90,72 @@
 	}
 
 
-	.checkbox:checked+.consult__circle {
-		background-color: #fff;
-	}
+}
 
-	.checkbox:focus-visible {
-		outline: 2px solid white;
-	}
+.consult__input {
+	width: 100%;
+	display: block;
+	@include font (25px, 500, 1.2, white);
+	padding: 32px;
+	background-color: transparent;
+	border: 2px solid #FFFFFF;
+	border-radius: 80px;
+	outline: none;
+}
 
-	.checkbox:checked+.consult__circle {
-		background-color: #fff;
-	}
+.consult__input:focus {
+	outline: 2px solid white;
+	outline-offset: 3px;
+}
 
-	.checkbox:focus+.consult__circle {
-		border: 2px solid #FFFFFF;
-	}
+.consult__input::placeholder {
+	@include font (25px, 500, 1.2, white);
+
+}
 
 
-	.consult__invalidText {
-		margin-top: 8px;
-		padding-left: 20px;
-		@include font(16px, 500, 19px, #FF3B3B)
-	}
+.consult__star {
+	@include font(80px, 500, 97px, #FF3C3C);
+	position: absolute;
+	top: 20px;
+	right: 16px;
+	display: none;
+}
 
-	.consult__formItem {
-		position: relative;
-	}
+.consult__input:invalid:not(:focus):not(:placeholder-shown)+.consult__star {
+	display: block;
 
-	.consult__star {
-		@include font(80px, 500, 97px, #FF3C3C);
-		position: absolute;
-		top: 10px;
-		right: 10px;
-	}
+}
+
+.consult__input:invalid:not(:focus):not(:placeholder-shown)~.consult__invalidText {
+	display: block;
+
+}
+
+.consult__invalidText {
+	margin-top: 8px;
+	padding-left: 20px;
+	@include font(16px, 500, 19px, #FF3B3B);
+	display: none;
+}
+
+
+.relative {
+	position: relative;
+}
+
+.checkbox:checked+.consult__circle {
+	background-color: #fff;
+}
+
+.checkbox:focus-visible {
+	outline: 2px solid white;
+}
+
+.checkbox:checked+.consult__circle {
+	background-color: #fff;
+}
+
+.checkbox:focus+.consult__circle {
+	border: 2px solid #FFFFFF;
 }

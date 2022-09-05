@@ -14,25 +14,28 @@
               placeholder="Имя*"
               autocomplete="off"
               required
+              minlength="3"
             />
             <span class="consult__star">*</span>
           </div>
-
-          <input
-            class="consult__input"
-            name="surname"
-            type="text"
-            placeholder="Фамилия*"
-            autocomplete="off"
-            required
-          />
+          <div class="relative">
+            <input
+              class="consult__input"
+              name="surname"
+              type="text"
+              placeholder="Фамилия*"
+              autocomplete="off"
+              required
+              minlength="3"
+            />
+            <span class="consult__star">*</span>
+          </div>
         </div>
-
         <p class="consult__invalidText">
           Необходимо заполнить поле “Имя” и “Фамилия”
         </p>
       </div>
-      <div class="consult__formItem">
+      <div class="relative">
         <input
           aria-label="Название организации"
           class="consult__input"
@@ -40,24 +43,28 @@
           type="text"
           placeholder="Название организации*"
           required
+          minlength="3"
         />
         <span class="consult__star">*</span>
         <p class="consult__invalidText">
           Необходимо заполнить поле “Название организации”
         </p>
       </div>
-      <div class="consult__formItem">
+      <div class="relative">
         <input
           class="consult__input"
           name="phone"
           data-tel-input
-          type="tel"
+          type="text"
           placeholder="Телефон*"
           required
+          minlength="11"
+          pattern="[789][0-9]{9}"
         />
+        <span class="consult__star">*</span>
         <p class="consult__invalidText">Необходимо заполнить поле “Телефон”</p>
       </div>
-      <div class="consult__formItem">
+      <div class="relative">
         <input
           class="consult__input"
           name="email"
@@ -65,6 +72,7 @@
           placeholder="Электронная почта*"
           required
         />
+        <span class="consult__star">*</span>
         <p class="consult__invalidText">
           Необходимо заполнить поле “Электронная почта”
         </p>
