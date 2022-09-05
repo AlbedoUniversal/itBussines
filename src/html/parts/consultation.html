@@ -2,46 +2,82 @@
   <div class="consult__container">
     <h2 class="consult__heading">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</h2>
     <form class="consult__form" id="form">
-      <div class="consult__in-half">
-        <input
-          class="consult__input"
-          name="name"
-          type="text"
-          placeholder="Имя*"
-        />
-        <input
-          class="consult__input"
-          name="surname"
-          type="text"
-          placeholder="Фамилия*"
-        />
+      <div>
+        <div class="consult__in-half">
+          <div class="relative">
+            <input
+              aria-label="Имя"
+              id="name"
+              class="consult__input"
+              name="name"
+              type="text"
+              placeholder="Имя*"
+              autocomplete="off"
+              required
+            />
+            <span class="consult__star">*</span>
+          </div>
+
+          <input
+            class="consult__input"
+            name="surname"
+            type="text"
+            placeholder="Фамилия*"
+            autocomplete="off"
+            required
+          />
+        </div>
+
+        <p class="consult__invalidText">
+          Необходимо заполнить поле “Имя” и “Фамилия”
+        </p>
       </div>
-      <input
-        class="consult__input"
-        name="organization"
-        type="text"
-        placeholder="Название организации*"
-      />
-      <input
-        class="consult__input"
-        name="phone"
-        type="tel"
-        placeholder="Телефон*"
-      />
-      <input
-        class="consult__input"
-        name="email"
-        type="email"
-        placeholder="Электронная почта*"
-      />
+      <div class="consult__formItem">
+        <input
+          aria-label="Название организации"
+          class="consult__input"
+          name="organization"
+          type="text"
+          placeholder="Название организации*"
+          required
+        />
+        <span class="consult__star">*</span>
+        <p class="consult__invalidText">
+          Необходимо заполнить поле “Название организации”
+        </p>
+      </div>
+      <div class="consult__formItem">
+        <input
+          class="consult__input"
+          name="phone"
+          data-tel-input
+          type="tel"
+          placeholder="Телефон*"
+          required
+        />
+        <p class="consult__invalidText">Необходимо заполнить поле “Телефон”</p>
+      </div>
+      <div class="consult__formItem">
+        <input
+          class="consult__input"
+          name="email"
+          type="email"
+          placeholder="Электронная почта*"
+          required
+        />
+        <p class="consult__invalidText">
+          Необходимо заполнить поле “Электронная почта”
+        </p>
+      </div>
       <div class="consult__in-half">
         <button class="consult__button" type="submit">отправить</button>
         <label class="consult__checkbox-label">
           <input
-            class="_visuallyhidden"
+            class="_visuallyhidden checkbox"
             name="agreement"
             value="yes"
             type="checkbox"
+            required
           />
           <span class="consult__circle"></span>
           <span class="consult__label-text"

@@ -1,7 +1,3 @@
-import al3 from './modules/tabs.js';
+import { phoneInput } from './modules/phoneinput.js';
 
-document.addEventListener('DOMContentLoaded', () => {
-	console.log('Hello, world123');
-});
-
-al3();
+phoneInput();
