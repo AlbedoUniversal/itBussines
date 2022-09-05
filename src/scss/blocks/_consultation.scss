@@ -63,7 +63,7 @@
 		gap: 25px;
 		justify-content: space-between;
 		max-width: 100%;
-		align-items: start;
+		align-items: center;
 
 		@include respond-above('720') {
 			flex-wrap: nowrap;
@@ -71,13 +71,11 @@
 		}
 
 		&--name {
-			position: relative;
-
-
-			@include respond-above('720') {
-				flex-wrap: wrap;
-			}
-
+			display: flex;
+			gap: 25px;
+			justify-content: space-between;
+			max-width: 100%;
+			align-items: center;
 		}
 
 
@@ -89,10 +87,10 @@
 		@include font(14px, 500, 19px, #FF3B3B);
 		flex-basis: 100%;
 		position: absolute;
+		display: none;
 
 		&--name {
-			width: 100%;
-			bottom: -26px;
+			padding-left: 10px
 		}
 
 
@@ -154,7 +152,7 @@
 	}
 
 	&__label-text {
-		@include font (18px, 500, 1.2, white);
+		@include font (16px, 500, 1.2, white);
 		border-radius: 80px;
 
 		@include respond-above('1440') {
@@ -177,15 +175,6 @@
 	border-radius: 80px;
 	outline: none;
 
-	&--name,
-	&--surname {
-
-
-		@include respond-above('720') {
-			flex-basis: 48%;
-		}
-	}
-
 	@include respond-above('720') {
 		font-size: 25px;
 		padding: 30px;
@@ -195,23 +184,29 @@
 		font-size: fliud(20, 35);
 		padding: fliud(40, 46);
 	}
-
 }
 
-.consult__input:after {
-	content: '';
+.relative {
+
+	position: relative;
+
+	&--name,
+	&--surname {
+		@include respond-above('570') {
+			flex-basis: 48%;
+		}
+
+	}
+}
+
+.star {
 	@include font(80px, 500, 97px, #FF3C3C);
 	position: absolute;
-	top: 20px;
-	display: block;
-	right: 16px;
-	z-index: 5;
-	height: 20px;
-	width: 20px;
-	background-color: rgb(212, 32, 32);
-
+	top: 50%;
+	transform: translateY(-30%);
+	display: none;
+	right: 23px;
 }
-
 
 .consult__input:focus {
 	outline: 2px solid white;
@@ -223,19 +218,24 @@
 
 	@include respond-above('720') {
 		font-size: 25px;
-
 	}
 
 }
 
-.consult__input:invalid:not(:focus):not(:placeholder-shown)+.consult__star {
+.consult__input:invalid:not(:focus):not(:placeholder-shown)+.star {
+	display: block;
+
+}
+
+
+.consult__input--surname:invalid:not(:focus):not(:placeholder-shown)~.consult__invalidText,
+.consult__input--name:invalid:not(:focus):not(:placeholder-shown)~.consult__invalidText {
 	display: block;
 
 }
 
 .consult__input:invalid:not(:focus):not(:placeholder-shown)~.consult__invalidText {
 	display: block;
-
 }
 
 //checkbox
