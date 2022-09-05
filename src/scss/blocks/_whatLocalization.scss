@@ -3,6 +3,7 @@
 		opacity: 0;
 		transform: translateX(50%);
 	}
+
 	100% {
 		opacity: 1;
 		transform: translateX(0);
@@ -16,6 +17,7 @@
 		width: 0;
 		// display: none !important;
 	}
+
 	100% {
 		left: 0%;
 		opacity: 1;
@@ -27,6 +29,7 @@
 	0% {
 		left: 0%;
 	}
+
 	100% {
 		left: 175%;
 		display: none;
@@ -37,6 +40,7 @@
 	0% {
 		opacity: 0;
 	}
+
 	100% {
 		opacity: 1;
 	}
@@ -46,6 +50,7 @@
 	0% {
 		opacity: 1;
 	}
+
 	100% {
 		opacity: 0;
 	}
@@ -62,6 +67,14 @@
 	@media screen and (max-width: 991px) {
 		padding-bottom: 40px;
 	}
+
+	@include container;
+
+	@media (max-width: 1700px) {
+		padding-right: 5%;
+		padding-left: 5%;
+	}
+
 	&__content {
 		display: flex;
 		justify-content: center;
@@ -84,10 +97,12 @@
 		display: flex;
 		flex-direction: row;
 		gap: fluid(43, 53);
+
 		@media screen and (max-width: 991px) {
 			gap: fluid(20, 40);
 			width: 100%;
 		}
+
 		@media screen and (max-width: 940px) {
 			position: relative;
 		}
@@ -209,6 +224,7 @@
 			background-color: #01d1ff;
 			color: #ffffff;
 			cursor: default;
+
 			&:first-child {
 				&:not(:target) ~ .whatLocalization__links > a[href='#content-1'] {
 					background-color: #01d1ff;
@@ -221,6 +237,7 @@
 
 					& > .whatLocalization__mark {
 						border-color: #ffffff;
+
 						&:before {
 							position: absolute;
 							content: '';
@@ -233,6 +250,7 @@
 							top: 0;
 							bottom: 0;
 							margin: auto;
+
 							@media screen and (max-width: 1600px) {
 								width: 14px;
 								height: 14px;
@@ -328,6 +346,7 @@
 				top: 0;
 				bottom: 0;
 				margin: auto;
+
 				@media screen and (max-width: 1600px) {
 					width: 14px;
 					height: 14px;
@@ -358,6 +377,7 @@
 						text-align: center;
 					}
 					border-color: #aaaaaa !important;
+
 					&:before {
 						position: absolute;
 						content: '';
@@ -379,6 +399,7 @@
 					}
 				}
 			}
+
 			& ~ #content-0 {
 				display: none;
 			}
@@ -426,13 +447,16 @@
 			height: 100%;
 		}
 	}
+
 	&__text-sub {
 		margin-bottom: 0;
 	}
+
 	&__list {
 		margin: 0;
 		padding-left: 20px;
 	}
+
 	&__list-item {
 		margin: 0;
 		position: relative;
