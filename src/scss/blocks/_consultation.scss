@@ -27,14 +27,25 @@
 		text-transform: uppercase;
 		text-align: center;
 
+		@include respond-above('1800') {
+
+			text-align: start;
+		}
+
 	}
 
 	&__form {
 		overflow: hidden;
 		display: flex;
+		flex-shrink: 0;
 		flex-direction: column;
-		max-width: 564px;
+		width: 564px;
 		gap: 37px;
+
+
+		@include respond-above('2000') {
+			width: 790px;
+		}
 	}
 
 	&__in-half {

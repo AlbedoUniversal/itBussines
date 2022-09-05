@@ -1,25 +1,28 @@
 .footer {
 	@include container;
 
-	padding-bottom: fluid(53, 68);
-	padding-right: fluid(75, 321);
-	padding-left: fluid(75, 339);
+	padding-bottom: fluid(30, 68, 350);
+	padding-right: fluid(20, 321, 350);
+	padding-left: fluid(20, 339, 350);
 
 	display: flex;
 	justify-content: space-between;
+	gap: 20px;
 
 	&__credit {
 		display: flex;
 		flex-direction: column;
 
 		@include respond-above('1800') {
+			gap: 50px;
+			justify-content: center;
 			flex-direction: row;
 		}
 	}
 
 	&__info {
 		@include respond-above('1800') {
-			flex-order: -1;
+			order: -1;
 		}
 	}
 
@@ -28,20 +31,34 @@
 	}
 
 	&__info-item:not(:last-child) {
-		margin-bottom: fluid(16, 35);
-	}
+		margin-bottom: 16px;
 
-	&__contact {}
+		@include respond-above('1800') {
+			margin-bottom: 50px;
+
+		}
+	}
 
 	&__link-with-icon {
 		display: flex;
 		gap: 25px;
 		align-items: center;
 		margin-bottom: 19px;
+
+		@include respond-above('1800') {
+			margin-bottom: 0px;
+		}
+	}
+
+	&__link-with-icon:not(:last-child) {
+		@include respond-above('1800') {
+			margin-bottom: 30px;
+
+		}
 	}
 
 
-	&__icon {}
+
 
 	&__link {
 		@include font(fluid(10, 20), 500, 1.2, white);
@@ -51,6 +68,20 @@
 		}
 	}
 
-	&__logo {}
+	&__logo {
+		width: 272px;
+		height: 79px;
+		object-fit: contain;
+
+		@include respond-above(2000) {
+			width: 352px;
+			height: 105px;
+
+		}
+	}
+
+	&__logo-container {
+		align-self: end;
+	}
 
 }
