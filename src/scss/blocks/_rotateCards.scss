@@ -8,6 +8,10 @@
 		justify-content: center;
 		flex: 0 1 50%;
 		gap: fluid(20, 304);
+
+		@media screen and (max-width: 768px) {
+			flex-direction: column;
+		}
 	}
 	&__container {
 		text-align: center;
@@ -43,6 +47,18 @@
 		-o-transition: 0.7s linear;
 		transition: 0.7s linear;
 		margin-bottom: 40px;
+
+		@media screen and (max-width: 1400px) {
+			width: 400px;
+			height: 400px;
+		}
+		@media screen and (max-width: 991px) {
+			width: 300px;
+			height: 300px;
+		}
+		@media screen and (max-width: 768px) {
+			width: 90%;
+		}
 	}
 	&__front,
 	&__back {
@@ -115,6 +131,15 @@
 		text-transform: uppercase;
 
 		color: #000000;
+
+		@media screen and (max-width: 1400px) {
+			line-height: 43px;
+			font-size: 33px;
+		}
+		@media screen and (max-width: 991px) {
+			line-height: 27px;
+			font-size: 21px;
+		}
 	}
 
 	&__back {
