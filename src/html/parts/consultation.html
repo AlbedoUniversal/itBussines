@@ -3,37 +3,32 @@
     <h2 class="consult__heading">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</h2>
     <form class="consult__form" id="form">
       <div>
-        <div class="consult__in-half">
-          <div class="relative">
-            <input
-              aria-label="Имя"
-              id="name"
-              class="consult__input"
-              name="name"
-              type="text"
-              placeholder="Имя*"
-              autocomplete="off"
-              required
-              minlength="3"
-            />
-            <span class="consult__star">*</span>
-          </div>
-          <div class="relative">
-            <input
-              class="consult__input"
-              name="surname"
-              type="text"
-              placeholder="Фамилия*"
-              autocomplete="off"
-              required
-              minlength="3"
-            />
-            <span class="consult__star">*</span>
-          </div>
+        <div class="consult__in-half consult__in-half--name">
+          <input
+            aria-label="Имя"
+            id="name"
+            class="consult__input consult__input--name"
+            name="name"
+            type="text"
+            placeholder="Имя*"
+            autocomplete="off"
+            required
+            minlength="3"
+          />
+
+          <input
+            class="consult__input consult__input--surname"
+            name="surname"
+            type="text"
+            placeholder="Фамилия*"
+            autocomplete="off"
+            required
+            minlength="3"
+          />
+          <p class="consult__invalidText consult__invalidText--name">
+            Необходимо заполнить поле “Имя” и “Фамилия”
+          </p>
         </div>
-        <p class="consult__invalidText">
-          Необходимо заполнить поле “Имя” и “Фамилия”
-        </p>
       </div>
       <div class="relative">
         <input
@@ -45,7 +40,6 @@
           required
           minlength="3"
         />
-        <span class="consult__star">*</span>
         <p class="consult__invalidText">
           Необходимо заполнить поле “Название организации”
         </p>
@@ -61,7 +55,6 @@
           minlength="11"
           pattern="[789][0-9]{9}"
         />
-        <span class="consult__star">*</span>
         <p class="consult__invalidText">Необходимо заполнить поле “Телефон”</p>
       </div>
       <div class="relative">
@@ -72,7 +65,6 @@
           placeholder="Электронная почта*"
           required
         />
-        <span class="consult__star">*</span>
         <p class="consult__invalidText">
           Необходимо заполнить поле “Электронная почта”
         </p>
