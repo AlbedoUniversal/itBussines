@@ -223,6 +223,13 @@
 		& > #content-5:target ~ .whatLocalization__links > a[href='#content-5'] {
 			background-color: #01d1ff;
 			color: #ffffff;
+
+			@media screen and (max-width: 991px) {
+				&:not(&:first-child) {
+					background-color: #e9e9e9;
+					color: #aaaaaa;
+				}
+			}
 			cursor: default;
 
 			&:first-child {
