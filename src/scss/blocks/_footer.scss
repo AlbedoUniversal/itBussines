@@ -13,15 +13,14 @@
 		display: flex;
 		flex-direction: column;
 
-		@include respond-above('1800') {
+		@include respond-above(960) {
 			gap: 50px;
-			justify-content: center;
 			flex-direction: row;
 		}
 	}
 
 	&__info {
-		@include respond-above('1800') {
+		@include respond-above(960) {
 			order: -1;
 		}
 	}
@@ -33,7 +32,7 @@
 	&__info-item:not(:last-child) {
 		margin-bottom: 16px;
 
-		@include respond-above('1800') {
+		@include respond-above(960) {
 			margin-bottom: 50px;
 
 		}
@@ -45,26 +44,27 @@
 		align-items: center;
 		margin-bottom: 19px;
 
-		@include respond-above('1800') {
+		@include respond-above(960) {
 			margin-bottom: 0px;
 		}
 	}
 
 	&__link-with-icon:not(:last-child) {
-		@include respond-above('1800') {
+		@include respond-above(960) {
 			margin-bottom: 30px;
 
 		}
 	}
-
-
-
 
 	&__link {
 		@include font(fluid(10, 20), 500, 1.2, white);
 
 		&--underline {
 			text-decoration: underline;
+		}
+
+		:hover {
+			transform: scale(1.1)
 		}
 	}
 

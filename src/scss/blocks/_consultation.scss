@@ -5,10 +5,10 @@
 
 .consult {
 	@include container;
-	padding-top: fluid(60, 261);
-	padding-bottom: fluid(180, 400);
-	padding-right: fluid(75, 321);
-	padding-left: fluid(75, 339);
+	padding-top: fluid(64, 261, 350);
+	padding-bottom: fluid(80, 400, 350);
+	padding-right: fluid(20, 330, 350);
+	padding-left: fluid(20, 339, 350);
 
 	&__container {
 		display: flex;
@@ -39,7 +39,7 @@
 		display: flex;
 		flex-shrink: 0;
 		flex-direction: column;
-		width: 564px;
+		width: 100%;
 		gap: 37px;
 
 

@@ -1,14 +1,15 @@
 $font-family-main: Gilroy, Helvetica, sans-serif;
 $content-width: 2560px;
 
+//Spaces
+$padding-container-min: 20;
+$padding-container-max: 339;
+
 @mixin container {
 	max-width: $content-width;
 	margin: 0 auto;
-
-	@media screen and (max-width: 1300px) {
-		padding-right: 50px;
-		padding-left: 50px;
-	}
+	padding-right: fluid($padding-container-min, $padding-container-max);
+	padding-left: fluid($padding-container-min, $padding-container-max)
 }
 
 @mixin font($size: 16px, $weight: false, $lh: false, $color: false) {
