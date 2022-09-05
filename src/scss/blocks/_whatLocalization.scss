@@ -9,6 +9,42 @@
 	}
 }
 
+@keyframes moveLeft {
+	0% {
+		left: 175%;
+	}
+	100% {
+		left: 0%;
+	}
+}
+
+@keyframes callBack {
+	0% {
+		left: 0%;
+	}
+	100% {
+		left: 175%;
+	}
+}
+
+@keyframes showcross {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes dissshowcross {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
 .whatLocalization {
 	padding-top: fluid(31, 100);
 	padding-bottom: fluid(130, 220);
@@ -35,6 +71,9 @@
 		gap: fluid(43, 53);
 		@media screen and (max-width: 991px) {
 			gap: fluid(20, 40);
+		}
+		@media screen and (max-width: 940px) {
+			position: relative;
 		}
 	}
 
@@ -263,6 +302,13 @@
 		width: 100%;
 		padding: fluid(40, 91);
 		@include font(fluid(20, 25), 500, 1.22, #ffffff);
+
+		@media screen and (max-width: 940px) {
+			position: absolute;
+			left: 175%;
+			animation: moveLeft 1s forwards;
+			z-index: 2;
+		}
 	}
 	&__text-sub {
 		margin-bottom: 0;
@@ -289,5 +335,24 @@
 
 	&__anim-box {
 		animation: showText 1s forwards;
+	}
+
+	&__cross {
+		position: absolute;
+		display: block !important;
+		z-index: 33;
+		right: 15px;
+		top: 15px;
+
+		transition: opacity 0.3s;
+
+		&__link_cross {
+			padding: 0;
+			background-color: transparent;
+		}
+
+		img {
+			width: 30px;
+		}
 	}
 }
