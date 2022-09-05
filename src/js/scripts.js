@@ -1,3 +1,3 @@
-document.addEventListener("DOMContentLoaded", () => {
-  console.log("Hello, world123");
-});
+import { phoneInput } from "./modules/phoneinput.js";
+
+phoneInput();
