@@ -4,24 +4,23 @@ $content-width: 2560px;
 @mixin container {
 	max-width: $content-width;
 	margin: 0 auto;
-}
 
+	@media screen and (max-width: 1300px) {
+		padding-right: 50px;
+		padding-left: 50px;
+	}
+}
 
 @mixin font($size: 16px, $weight: false, $lh: false, $color: false) {
 	font-family: $font-family-main;
-
-
 
 	@if $size {
 		font-size: $size;
 	}
 
-
 	@if $weight {
 		font-weight: $weight;
 	}
-
-
 
 	@if $color {
 		color: $color;
