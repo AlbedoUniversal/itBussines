@@ -2,6 +2,7 @@
 	padding-top: fluid(55, 140);
 	padding-bottom: fluid(55, 140);
 	background-image: url('@img/backgroundCards.jpeg');
+	background-size: cover;
 	&__content {
 		@include container;
 		display: flex;

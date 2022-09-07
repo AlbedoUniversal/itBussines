@@ -162,6 +162,9 @@
 		@media screen and (max-width: 1450px) {
 			font-size: 18px;
 		}
+		@media screen and (max-width: 500px) {
+			font-size: 14px;
+		}
 
 		&:hover {
 			background-color: #dddddd;
@@ -199,6 +202,7 @@
 				color: #ffffff;
 				background-color: #01d1ff;
 				vertical-align: -webkit-baseline-middle;
+				height: 17px !important;
 			}
 		}
 
@@ -268,6 +272,7 @@
 								color: #ffffff;
 								background-color: #01d1ff;
 								vertical-align: -webkit-baseline-middle;
+								height: 17px !important;
 							}
 						}
 						@media screen and (max-width: 991px) {
@@ -428,11 +433,13 @@
 	&__tabs > div:target {
 		display: block;
 		opacity: 1;
+		transition: all 0.3s;
 
 		@media screen and (max-width: 991px) {
 			display: flex;
 			justify-content: center;
 			align-items: center;
+			transition: 0.3s;
 		}
 	}
 
@@ -452,6 +459,9 @@
 		}
 		@media screen and (max-width: 940px) {
 			height: 100%;
+		}
+		@media screen and (max-width: 500px) {
+			font-size: 14px;
 		}
 	}
 
