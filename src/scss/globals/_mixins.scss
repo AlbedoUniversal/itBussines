@@ -56,3 +56,17 @@ $padding-container-max: 339;
 		@content;
 	}
 }
+
+@mixin text-shorten($numLines: 1) {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+
+	@supports (-webkit-line-clamp: $numLines) {
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: initial;
+		-webkit-line-clamp: $numLines;
+		-webkit-box-orient: vertical;
+	}
+}
