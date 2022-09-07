@@ -14,6 +14,9 @@ export function tabs() {
 
 	links.forEach((el) => {
 		el.addEventListener('click', (e) => {
+			e.preventDefault();
+			const hash = el.getAttribute('href');
+			window.location = hash;
 			cross.style.animation = 'showcross 1s forwards';
 			cross.style.animationDuration = '1.3s';
 			text.forEach((el) => {
