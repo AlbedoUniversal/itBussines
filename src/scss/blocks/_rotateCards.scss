@@ -8,7 +8,7 @@
 		display: flex;
 		justify-content: center;
 		flex: 0 1 50%;
-		gap: fluid(20, 304);
+		gap: fluid(20, 200);
 
 		@media screen and (max-width: 991px) {
 			gap: fluid(20, 204);
@@ -42,8 +42,8 @@
 	}
 	&__flipper {
 		position: relative;
-		width: 550px;
-		height: 550px;
+		width: 400px;
+		height: 400px;
 		-webkit-transform-style: preserve-3d;
 		-moz-transform-style: preserve-3d;
 		transform-style: preserve-3d;
@@ -100,8 +100,8 @@
 
 		&::after {
 			content: '';
-			width: 80px;
-			height: 30px;
+			width: 60px;
+			height: 20px;
 			position: absolute;
 			background: #d9d9d9;
 			border-radius: 60px;
@@ -113,7 +113,7 @@
 		font-size: 16px;
 		line-height: 20px;
 		text-transform: uppercase;
-		margin: 35px 0 15px 0;
+		margin: 20px 0 15px 0;
 	}
 
 	&__header h3 {
@@ -153,8 +153,8 @@
 	&__front p {
 		text-align: left;
 		font-weight: 900;
-		font-size: 50px;
-		line-height: 63px;
+		font-size: 30px;
+		line-height: 1.2;
 		text-transform: uppercase;
 
 		color: #000000;
@@ -180,8 +180,8 @@
 
 		&::after {
 			content: '';
-			width: 80px;
-			height: 30px;
+			width: 60px;
+			height: 20px;
 			position: absolute;
 			background: #01d1ff;
 			border-radius: 60px;
@@ -197,7 +197,7 @@
 	&__back h3 {
 		position: relative;
 		font-family: Gilroy;
-		font-size: 20px;
+		font-size: 16px;
 		font-weight: 600;
 		line-height: 18px;
 		letter-spacing: 0em;
@@ -257,8 +257,8 @@
 	}
 
 	&__ball {
-		height: 40px;
-		width: 40px;
+		height: 30px;
+		width: 30px;
 		border-radius: 100%;
 		background-color: #c6c6c6;
 		border: 3px solid #ffffff;
