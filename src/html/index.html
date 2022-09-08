@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="ru">
-	@@include('./parts/head.html')
-	<body>
-		@@include('./parts/header.html')
-		<main>
-			@@include('./parts/greeting.html') @@include('./parts/forWho.html')
-			@@include('./parts/rotateCards.html') @@include('./parts/whatLocalization.html')
-			@@include('./parts/processBlock.html') @@include('./parts/lanitBlock.html')
-			<div class="wrapper">
-				@@include('./parts/consultation.html') @@include('./parts/footer.html')
-			</div>
-		</main>
-	</body>
+  @@include('./parts/head.html')
+  <body>
+    <main>
+      <div class="wrapper-header">
+        @@include('./parts/header.html') @@include('./parts/greeting.html')
+      </div>
+      @@include('./parts/forWho.html') @@include('./parts/rotateCards.html')
+      @@include('./parts/whatLocalization.html')
+      @@include('./parts/processBlock.html')
+      @@include('./parts/lanitBlock.html')
+      <div class="wrapper">
+        @@include('./parts/consultation.html') @@include('./parts/footer.html')
+      </div>
+    </main>
+  </body>
 </html>

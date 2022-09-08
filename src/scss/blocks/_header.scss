@@ -1,0 +1,89 @@
+.wrapper-header {
+	padding-top: 30px;
+	background-image: url('@img/greeting-bg.png');
+	background-size: cover;
+	background-position: right bottom;
+	@include container;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	// position: relative;
+
+}
+
+.header__logo {
+	width: 188px;
+	object-fit: contain;
+}
+
+.header__button {
+	background: transparent;
+	padding: 0;
+	border: 0;
+
+	width: 60px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: stretch;
+	z-index: 1;
+
+	&--open {
+		transform: translateX(-100%);
+	}
+
+	// @include respond-above('700') {
+	// 	width: 75px;
+	// }
+}
+
+.header__button-row {
+	height: 8px;
+	background: #01D1FF;
+	border-radius: 10px;
+	width: 100%;
+
+	&--open {
+		background: white;
+	}
+
+	// @include respond-above('700') {
+	// 	height: 10px;
+	// }
+}
+
+.menu {
+	position: absolute;
+	top: 123px;
+	right: 0;
+	width: 100%;
+	max-width: 2560px;
+	min-height: calc(100vh - 123px);
+	background-color: white;
+	transform: translateX(100%);
+	transition: transform 200ms ease-in;
+
+	&--open {
+		transform: translateX(0);
+	}
+}
+
+.menu__list {
+	padding: 0 40px;
+}
+
+.menu__item {
+	padding: 30px 0;
+	font-weight: 700;
+	font-size: 21px;
+	line-height: 1.2;
+	text-transform: uppercase;
+
+	color: #0A0A0A;
+}
+
+.menu__item:not(:last-child) {
+	border-bottom: 2px solid #01D1FF;
+}
