@@ -8,7 +8,9 @@
 		display: flex;
 		justify-content: center;
 		flex: 0 1 50%;
-		gap: fluid(20, 304);
+		gap: fluid(20, 200);
+		margin-top: 50px;
+		margin-bottom: 50px;
 
 		@media screen and (max-width: 991px) {
 			gap: fluid(20, 204);
@@ -20,7 +22,6 @@
 	}
 	&__container {
 		text-align: center;
-		// margin: 20px auto;
 		-webkit-perspective: 1200;
 		perspective: 1200;
 		-moz-transform: perspective(1200px);
@@ -42,8 +43,8 @@
 	}
 	&__flipper {
 		position: relative;
-		width: 550px;
-		height: 550px;
+		width: 400px;
+		height: 400px;
 		-webkit-transform-style: preserve-3d;
 		-moz-transform-style: preserve-3d;
 		transform-style: preserve-3d;
@@ -66,6 +67,12 @@
 		}
 		@media screen and (max-width: 470px) {
 			height: 430px;
+		}
+		@media screen and (max-width: 380px) {
+			height: 460px;
+		}
+		@media screen and (max-width: 352px) {
+			height: 470px;
 		}
 	}
 	&__front,
@@ -100,20 +107,36 @@
 
 		&::after {
 			content: '';
-			width: 80px;
-			height: 30px;
+			width: 60px;
+			height: 20px;
 			position: absolute;
 			background: #d9d9d9;
 			border-radius: 60px;
 			top: 30px;
 			right: 50px;
+
+			@media screen and (max-width: 380px) {
+				top: 20px;
+				right: 40px;
+			}
 		}
 	}
 	h3 {
 		font-size: 16px;
 		line-height: 20px;
 		text-transform: uppercase;
-		margin: 35px 0 15px 0;
+		margin: 20px 0 15px 0;
+		@media screen and (max-width: 768px) {
+			padding-right: 100px;
+			text-align: left;
+		}
+		@media screen and (max-width: 420px) {
+			padding-right: 50px;
+			text-align: left;
+		}
+		@media screen and (max-width: 380px) {
+			padding-right: 20px;
+		}
 	}
 
 	&__header h3 {
@@ -124,6 +147,10 @@
 		text-transform: uppercase;
 
 		color: #000000;
+
+		@media screen and (max-width: 991px) {
+			font-size: 35px;
+		}
 	}
 
 	&__list {
@@ -153,8 +180,8 @@
 	&__front p {
 		text-align: left;
 		font-weight: 900;
-		font-size: 50px;
-		line-height: 63px;
+		font-size: 30px;
+		line-height: 1.2;
 		text-transform: uppercase;
 
 		color: #000000;
@@ -164,8 +191,8 @@
 			font-size: 33px;
 		}
 		@media screen and (max-width: 991px) {
-			line-height: 27px;
-			font-size: 21px;
+			line-height: 1.4;
+			font-size: 18px;
 		}
 	}
 
@@ -180,13 +207,17 @@
 
 		&::after {
 			content: '';
-			width: 80px;
-			height: 30px;
+			width: 60px;
+			height: 20px;
 			position: absolute;
 			background: #01d1ff;
 			border-radius: 60px;
 			top: 30px;
 			right: 50px;
+			@media screen and (max-width: 380px) {
+				top: 20px;
+				right: 40px;
+			}
 
 			@media screen and (max-width: 991px) {
 				width: 60px;
@@ -197,7 +228,7 @@
 	&__back h3 {
 		position: relative;
 		font-family: Gilroy;
-		font-size: 20px;
+		font-size: 16px;
 		font-weight: 600;
 		line-height: 18px;
 		letter-spacing: 0em;
@@ -214,7 +245,7 @@
 			font-size: 16px;
 		}
 		@media screen and (max-width: 470px) {
-			font-size: 13px;
+			font-size: 12px;
 		}
 	}
 
@@ -257,16 +288,16 @@
 	}
 
 	&__ball {
-		height: 40px;
-		width: 40px;
+		height: 30px;
+		width: 30px;
 		border-radius: 100%;
 		background-color: #c6c6c6;
 		border: 3px solid #ffffff;
 		transition: background-color 1s;
 
 		@media screen and (max-width: 768px) {
-			height: 30px;
-			width: 30px;
+			height: 25px;
+			width: 25px;
 		}
 		&:nth-child(2) {
 			background-color: transparent;

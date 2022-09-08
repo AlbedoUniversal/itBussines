@@ -57,18 +57,16 @@
 }
 
 .whatLocalization {
-	padding-top: fluid(31, 100);
-	padding-bottom: fluid(130, 220);
 	padding-right: fluid(90, 339);
 	padding-left: fluid(90, 339);
 	overflow: hidden;
 	@include container;
+	margin-top: 50px;
+	margin-bottom: 50px;
 
 	@media screen and (max-width: 991px) {
 		padding-bottom: 40px;
 	}
-
-	@include container;
 
 	@media (max-width: 1700px) {
 		padding-right: 5%;
@@ -83,13 +81,17 @@
 	}
 
 	&__heading {
-		@include font(fluid(35, 75), 900, 1.44, #0a0a0a);
+		@include font(fluid(20, 50), 900, 1.44, #0a0a0a);
 		text-transform: uppercase;
 		text-align: center;
-		margin-bottom: fluid(118, 60);
+		margin-bottom: fluid(15, 40);
 
 		@media screen and (max-width: 1200px) {
 			margin-bottom: 60px;
+		}
+
+		@media screen and (max-width: 600px) {
+			margin-bottom: 30px;
 		}
 	}
 
@@ -130,10 +132,9 @@
 		white-space: nowrap;
 		margin-bottom: 15px;
 		background-color: #fff;
-		border: 1px solid #e3f2fd;
 		border: none;
 		box-shadow: none;
-		gap: fluid(36, 47);
+		gap: fluid(16, 30);
 		width: 100%;
 
 		@media screen and (max-width: 991px) {
@@ -142,22 +143,40 @@
 	}
 
 	&__link {
-		@include font(fluid(20, 35), 700, 1.22, #aaaaaa);
+		@include font(fluid(15, 20), 700, 1.22, #aaaaaa);
 
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		text-decoration: none;
 
-		padding-top: fluid(38, 39);
-		padding-bottom: fluid(38, 39);
-		padding-right: fluid(20, 22);
-		padding-left: fluid(41, 50);
+		padding-top: fluid(10, 25);
+		padding-bottom: fluid(10, 25);
+		padding-right: fluid(10, 22);
+		padding-left: fluid(15, 45);
 
 		background-color: #e9e9e9;
-		border-radius: 20px;
+		border-radius: 8px;
 
 		transition: background-color 0.3s;
+
+		&--secret {
+			border-top: 70px solid #ffffff;
+			position: relative;
+
+			&:before {
+				transition: background-color 0.3s;
+				content: '';
+				position: absolute;
+				width: 100%;
+				height: 10px;
+				background-color: #01d1ff;
+				top: -10px;
+				left: 0;
+				border-top-left-radius: 20px;
+				border-top-right-radius: 20px;
+			}
+		}
 
 		@media screen and (max-width: 1450px) {
 			font-size: 18px;
@@ -179,8 +198,8 @@
 	}
 
 	&__mark {
-		width: 44px;
-		height: 44px;
+		width: 33px;
+		height: 33px;
 		border: 3px solid #777777;
 		border-radius: 100%;
 		display: inline-block;
@@ -213,8 +232,6 @@
 		}
 
 		@media screen and (max-width: 1450px) {
-			// width: 30px;
-			// height: 30px;
 			margin-left: 0px;
 		}
 	}
@@ -244,6 +261,10 @@
 					@media screen and (max-width: 991px) {
 						background-color: #01d1ff;
 						color: #ffffff;
+					}
+
+					&:before {
+						background-color: #e9e9e9;
 					}
 
 					& > .whatLocalization__mark {
@@ -303,8 +324,8 @@
 				&:before {
 					position: absolute;
 					content: '';
-					width: 20px;
-					height: 20px;
+					width: 15px;
+					height: 15px;
 					background-color: #ffffff;
 					border-radius: 100%;
 					left: 0;
@@ -335,6 +356,10 @@
 		@media screen and (max-width: 991px) {
 			background-color: #e9e9e9;
 			color: #aaaaaa;
+
+			&:before {
+				background-color: #e9e9e9;
+			}
 		}
 
 		& > .whatLocalization__mark {
@@ -349,8 +374,8 @@
 			&:before {
 				position: absolute;
 				content: '';
-				width: 20px;
-				height: 20px;
+				width: 15px;
+				height: 15px;
 				background-color: #ffffff;
 				border-radius: 100%;
 				left: 0;
@@ -444,11 +469,25 @@
 	}
 
 	&__text {
+		border-top: 70px solid #ffffff;
 		background: #01d1ff;
-		border-radius: 20px;
+		border-radius: 8px;
 		width: 100%;
 		padding: fluid(40, 91);
-		@include font(fluid(20, 25), 500, 1.22, #ffffff);
+		@include font(fluid(15, 20), 500, 1.22, #ffffff);
+		position: relative;
+
+		&:before {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 10px;
+			background-color: #01d1ff;
+			top: -10px;
+			left: 0;
+			border-top-left-radius: 20px;
+			border-top-right-radius: 20px;
+		}
 
 		@media screen and (max-width: 991px) {
 			position: absolute;
@@ -498,8 +537,9 @@
 		position: absolute;
 		display: block !important;
 		z-index: 33;
-		right: 25px;
-		top: 25px;
+
+		right: 30px;
+		top: 95px;
 
 		transition: opacity 0.3s;
 
