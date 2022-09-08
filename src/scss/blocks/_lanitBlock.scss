@@ -26,6 +26,10 @@
 		@include respond-above(991) {
 			justify-content: center;
 		}
+
+		@media screen and (max-width: 991px) {
+			justify-content: center;
+		}
 	}
 
 	&__card {
@@ -61,6 +65,16 @@
 			min-height: 334px;
 		}
 
+		@media screen and (max-width: 991px) {
+			flex: 0 1 33%;
+			justify-content: flex-start;
+			padding: 25px;
+		}
+
+		@media screen and (max-width: 768px) {
+			flex: 0 1 100%;
+			min-height: 174px;
+		}
 		@media screen and (max-width: 470px) {
 			min-height: 212px;
 		}
@@ -97,6 +111,10 @@
 			font-size: fluid(25, 33);
 		}
 
+		@media screen and (max-width: 1300px) {
+			font-size: 16px;
+		}
+
 		@media screen and (max-width: 470px) {
 			font-size: 20px;
 		}
@@ -107,6 +125,9 @@
 
 		@include respond-above(1980) {
 			font-size: fluid(20, 25);
+		}
+		@media screen and (max-width: 1300px) {
+			font-size: 15px;
 		}
 	}
 }
