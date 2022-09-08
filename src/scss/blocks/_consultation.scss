@@ -29,7 +29,8 @@
 	}
 
 	&__heading {
-		@include font(fluid(35, 75), 900, 1.44, white);
+		@include font(fluid(20, 50), 900, 1.44, #ffffff);
+
 		text-transform: uppercase;
 		text-align: center;
 
