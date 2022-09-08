@@ -57,18 +57,16 @@
 }
 
 .whatLocalization {
-	padding-top: fluid(31, 100);
-	padding-bottom: fluid(130, 220);
 	padding-right: fluid(90, 339);
 	padding-left: fluid(90, 339);
 	overflow: hidden;
 	@include container;
+	margin-top: 50px;
+	margin-bottom: 50px;
 
 	@media screen and (max-width: 991px) {
 		padding-bottom: 40px;
 	}
-
-	@include container;
 
 	@media (max-width: 1700px) {
 		padding-right: 5%;
@@ -83,7 +81,7 @@
 	}
 
 	&__heading {
-		@include font(fluid(35, 75), 900, 1.44, #0a0a0a);
+		@include font(fluid(20, 50), 900, 1.44, #0a0a0a);
 		text-transform: uppercase;
 		text-align: center;
 		margin-bottom: fluid(15, 40);

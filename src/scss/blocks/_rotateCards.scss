@@ -9,6 +9,8 @@
 		justify-content: center;
 		flex: 0 1 50%;
 		gap: fluid(20, 200);
+		margin-top: 50px;
+		margin-bottom: 50px;
 
 		@media screen and (max-width: 991px) {
 			gap: fluid(20, 204);

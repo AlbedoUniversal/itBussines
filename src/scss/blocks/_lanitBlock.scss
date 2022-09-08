@@ -1,7 +1,7 @@
 .lanitBlock {
 	@include container;
-	padding-top: fluid(37, 116);
-	padding-bottom: fluid(194, 296);
+	margin-top: 50px;
+	margin-bottom: 50px;
 	padding-left: fluid(90, 339);
 	padding-right: fluid(90, 339);
 
@@ -12,10 +12,10 @@
 	}
 
 	&__heading {
-		@include font(fluid(35, 75), 900, 1.44, black);
+		@include font(fluid(20, 50), 900, 1.44, black);
 		text-transform: uppercase;
 		text-align: center;
-		margin-bottom: fluid(118, 177);
+		margin-bottom: fluid(70, 140);
 	}
 
 	&__cards {
@@ -39,16 +39,18 @@
 		flex: 0 1 100%;
 		min-height: 256px;
 
-		// @include respond-above(991) {
-		// 	ustify-content: center;
-		// 	flex-basis: 43%;
-		// 	max-width: 575px;
-		// }
-
 		@include respond-above(991) {
 			justify-content: start;
-			flex-basis: 43%;
+			flex-basis: 33%;
 			max-width: 575px;
+			min-height: 200px;
+		}
+
+		@include respond-above(1270) {
+			justify-content: start;
+			flex-basis: 27%;
+			max-width: 575px;
+			min-height: 200px;
 		}
 
 		@include respond-above(1880) {
@@ -69,11 +71,11 @@
 	}
 
 	&__card-header {
-		@include font(80px, 900, 1, #474747);
+		@include font(40px, 900, 1, #474747);
 		text-transform: uppercase;
 
 		@include respond-above(1980) {
-			font-size: fluid(80, 100);
+			font-size: fluid(40, 100);
 		}
 
 		@media screen and (max-width: 470px) {
