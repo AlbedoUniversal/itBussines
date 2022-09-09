@@ -1,6 +1,5 @@
 /* eslint-disable import/prefer-default-export */
-//Вставить URL для отправки формы
-const URL = "";
+const URL = "/form/send";
 
 const postData = async (url, data) => {
   const res = await fetch(url, {
@@ -27,7 +26,6 @@ export function postForm() {
         isError--;
       }
     });
-    console.log(isError);
     isError
       ? button.classList.add("disabled")
       : button.classList.remove("disabled");

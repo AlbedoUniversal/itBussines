@@ -113,10 +113,7 @@
 			flex-shrink: 0;
 		}
 
-		&:focus {
-			outline: 2px solid white;
-			outline-offset: 2px;
-		}
+
 	}
 
 	.disabled {
@@ -138,10 +135,10 @@
 	}
 
 	&__circle {
-		height: 26px;
-		width: 26px;
+		height: 32px;
+		width: 32px;
 		border-radius: 80px;
-		outline: 1px solid #ffffff;
+		border: 3px solid #ffffff;
 		outline-offset: 5px;
 		margin-right: 13px;
 		flex-shrink: 0;
@@ -199,10 +196,6 @@
 	right: 23px;
 }
 
-.consult__input:focus {
-	outline: 2px solid white;
-	outline-offset: 3px;
-}
 
 .consult__input::placeholder {
 	@include font(18px, 500, 1.2, white);
@@ -212,38 +205,30 @@
 	}
 }
 
-.consult__input:invalid:not(:focus):not(:placeholder-shown) + .star {
+.consult__input:invalid:not(:focus):not(:placeholder-shown)+.star {
 	display: block;
 }
 
-.consult__input--surname:invalid:not(:focus):not(:placeholder-shown)
-	~ .consult__invalidText,
-.consult__input--name:invalid:not(:focus):not(:placeholder-shown)
-	~ .consult__invalidText {
+.consult__input--surname:invalid:not(:focus):not(:placeholder-shown)~.consult__invalidText,
+.consult__input--name:invalid:not(:focus):not(:placeholder-shown)~.consult__invalidText {
 	display: -webkit-box;
 }
 
-.consult__input:invalid:not(:focus):not(:placeholder-shown) ~ .consult__invalidText {
+.consult__input:invalid:not(:focus):not(:placeholder-shown)~.consult__invalidText {
 	display: -webkit-box;
 }
 
 //checkbox
 
-.checkbox:checked + .consult__circle {
-	background-color: #fff;
+.checkbox:checked+.consult__circle {
+	background: #D9D9D9;
+	border: 3px solid #EAEAEA;
+
 }
 
-.checkbox:focus-visible {
-	outline: 2px solid white;
-}
 
-.checkbox:checked + .consult__circle {
-	background-color: #fff;
-}
 
-.checkbox:focus + .consult__circle {
-	outline: 4px solid #ffffff;
-}
+
 
 .succes__content {
 	display: flex;

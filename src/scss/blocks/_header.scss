@@ -6,16 +6,6 @@
 	padding-right: 30px;
 	padding-left: 30px;
 	@include container;
-
-
-	// @include respond-above('700') {
-	// 	padding-right: 60px;
-	// 	padding-left: 60px;
-	// }
-	// @include respond-above('700') {
-	// 	padding-right: 60px;
-	// 	padding-left: 60px;
-	// }
 }
 
 .header {
@@ -69,6 +59,7 @@
 .menu {
 	position: absolute;
 	top: 123px;
+	z-index: 3;
 	right: 0;
 	width: 100%;
 	max-width: 2560px;
