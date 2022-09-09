@@ -3,7 +3,19 @@
 	background-image: url('@img/greeting-bg.png');
 	background-size: cover;
 	background-position: right bottom;
+	padding-right: 30px;
+	padding-left: 30px;
 	@include container;
+
+
+	// @include respond-above('700') {
+	// 	padding-right: 60px;
+	// 	padding-left: 60px;
+	// }
+	// @include respond-above('700') {
+	// 	padding-right: 60px;
+	// 	padding-left: 60px;
+	// }
 }
 
 .header {

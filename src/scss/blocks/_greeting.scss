@@ -11,7 +11,7 @@
 .greeting__heading {
 	font-weight: 900;
 
-	font-size: 37px;
+	font-size: 35px;
 	line-height: 1.07;
 
 	text-transform: uppercase;
@@ -20,7 +20,12 @@
 	margin-bottom: 8px;
 
 	@include respond-above('700') {
-		font-size: 50px;
+		font-size: fluid(50, 150);
+
+	}
+
+	@include respond-above('700') {
+		margin-bottom: 15px;
 
 	}
 }
@@ -37,21 +42,35 @@
 	text-transform: uppercase;
 
 	color: #FFFFFF;
-	padding-bottom: 110px;
+	max-width: 970px;
+
+	padding-bottom: 80px;
 
 	@include respond-above('700') {
-		font-size: 22px;
-
+		font-size: fluid(22, 45);
+		padding-bottom: 110px;
 	}
 }
 
 .advantages {
 	display: flex;
 	flex-wrap: wrap;
-	align-items: center;
 	margin-bottom: 66px;
-
 	gap: 25px;
+
+	@include respond-above('700') {
+		gap: fluid(25, 99);
+		margin-bottom: 80px;
+	}
+
+}
+
+.advantages__item {
+	max-width: 720px;
+	// @include respond-above('700') {
+	// 	max-width: fluid(264, 620, 700);
+	// }
+
 }
 
 .advantages__item:not(:last-child) {
@@ -59,7 +78,33 @@
 	align-items: center;
 	justify-content: space-between;
 	flex-basis: 100%;
+
+	@include respond-above('700') {
+		align-items: start;
+	}
+
+	@include respond-above('1024') {
+		flex-basis: auto;
+		justify-content: start;
+
+	}
+
 }
+
+.advantages__group {
+	@include respond-above('1024') {
+		max-width: 272px;
+
+	}
+
+	@include respond-above('1350') {
+		max-width: fluid(272, 500, 1350);
+
+	}
+
+}
+
+
 
 .advantages__title {
 	font-weight: 800;
@@ -70,7 +115,7 @@
 	color: #FFFFFF;
 
 	@include respond-above('700') {
-		font-size: 25px;
+		font-size: fluid(22, 60, 700);
 
 	}
 }
@@ -83,7 +128,7 @@
 	color: #FFFFFF;
 
 	@include respond-above('700') {
-		font-size: 16px;
+		font-size: fluid(16, 23);
 
 	}
 }
@@ -95,6 +140,19 @@
 .advantages__svg {
 	min-width: 19px;
 	margin-left: 10px;
+	flex-shrink: 0;
+
+	@include respond-above('700') {
+		margin-left: fluid(10, 90);
+		width: 26.19px;
+		height: 93.04px;
+
+	}
+
+	@include respond-above('1920') {
+		width: 36.04px;
+		height: 128px;
+	}
 }
 
 .greeting__button {
@@ -116,8 +174,14 @@
 
 
 	@include respond-above('700') {
-		font-size: 16px;
+		font-size: fluid(16, 25);
+		padding: fluid(11, 24);
+		width: 360px;
 
+	}
+
+	@include respond-above('900') {
+		margin-bottom: 75px;
 	}
 }
 
