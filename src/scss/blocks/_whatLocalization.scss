@@ -550,8 +550,8 @@
 
 		transition: opacity 0.3s;
 
-		@media screen and (max-width: 991px) {
-			opacity: 0;
+		@media screen and (min-width: 991px) {
+			display: none !important;
 		}
 
 		&__link_cross {
