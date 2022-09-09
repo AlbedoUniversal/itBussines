@@ -103,7 +103,7 @@
 		flex-basis: 100%;
 		border: none;
 		outline: none;
-		cursor: pionter;
+		cursor: pointer;
 
 		@include respond-above('720') {
 			font-size: 25px;
