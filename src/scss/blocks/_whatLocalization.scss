@@ -61,8 +61,8 @@
 	padding-left: fluid(90, 339);
 	overflow: hidden;
 	@include container;
-	margin-top: 50px;
-	margin-bottom: 50px;
+	padding: 50px 0;
+
 
 	@media screen and (max-width: 991px) {
 		padding-bottom: 40px;
@@ -111,7 +111,7 @@
 	}
 
 	&__tabs {
-		& > #content-0 {
+		&>#content-0 {
 			display: block;
 			background: #01d1ff;
 			border-radius: 20px;
@@ -181,6 +181,7 @@
 		@media screen and (max-width: 1450px) {
 			font-size: 18px;
 		}
+
 		@media screen and (max-width: 500px) {
 			font-size: 14px;
 		}
@@ -216,6 +217,7 @@
 
 		&:before {
 			background-color: transparent;
+
 			@media screen and (max-width: 991px) {
 				content: '+';
 				color: #ffffff;
@@ -237,11 +239,12 @@
 	}
 
 	&__tabs {
-		& > #content-1,
-		& > #content-2:target ~ .whatLocalization__links > a[href='#content-2'],
-		& > #content-3:target ~ .whatLocalization__links > a[href='#content-3'],
-		& > #content-4:target ~ .whatLocalization__links > a[href='#content-4'],
-		& > #content-5:target ~ .whatLocalization__links > a[href='#content-5'] {
+
+		&>#content-1,
+		&>#content-2:target~.whatLocalization__links>a[href='#content-2'],
+		&>#content-3:target~.whatLocalization__links>a[href='#content-3'],
+		&>#content-4:target~.whatLocalization__links>a[href='#content-4'],
+		&>#content-5:target~.whatLocalization__links>a[href='#content-5'] {
 			background-color: #01d1ff;
 			color: #ffffff;
 
@@ -251,10 +254,11 @@
 					color: #aaaaaa;
 				}
 			}
+
 			cursor: default;
 
 			&:first-child {
-				&:not(:target) ~ .whatLocalization__links > a[href='#content-1'] {
+				&:not(:target)~.whatLocalization__links>a[href='#content-1'] {
 					background-color: #01d1ff;
 					color: #ffffff;
 
@@ -271,7 +275,7 @@
 						}
 					}
 
-					& > .whatLocalization__mark {
+					&>.whatLocalization__mark {
 						border-color: #ffffff;
 
 						&:before {
@@ -300,6 +304,7 @@
 								height: 17px !important;
 							}
 						}
+
 						@media screen and (max-width: 991px) {
 							// content: '+';
 							color: #ffffff;
@@ -316,8 +321,9 @@
 				}
 			}
 
-			& > .whatLocalization__mark {
+			&>.whatLocalization__mark {
 				border-color: #ffffff;
+
 				@media screen and (max-width: 991px) {
 					// content: '+';
 					color: #ffffff;
@@ -325,6 +331,7 @@
 					border-color: #01d1ff;
 					text-align: center;
 				}
+
 				&:before {
 					position: absolute;
 					content: '';
@@ -353,7 +360,7 @@
 		}
 	}
 
-	&__tabs > #content-1:target ~ .whatLocalization__links > a[href='#content-1'] {
+	&__tabs>#content-1:target~.whatLocalization__links>a[href='#content-1'] {
 		background-color: #01d1ff;
 		color: #ffffff;
 
@@ -366,8 +373,9 @@
 			}
 		}
 
-		& > .whatLocalization__mark {
+		&>.whatLocalization__mark {
 			border-color: #ffffff;
+
 			@media screen and (max-width: 991px) {
 				// content: '+';
 				color: #ffffff;
@@ -375,6 +383,7 @@
 				border-color: #01d1ff;
 				text-align: center;
 			}
+
 			&:before {
 				position: absolute;
 				content: '';
@@ -392,6 +401,7 @@
 					width: 14px;
 					height: 14px;
 				}
+
 				@media screen and (max-width: 991px) {
 					content: '+';
 					color: #ffffff;
@@ -402,17 +412,20 @@
 	}
 
 	&__tabs {
-		& > #content-2:target,
-		& > #content-3:target,
-		& > #content-4:target,
-		& > #content-5:target {
-			& ~ .whatLocalization__links > a[href='#content-1'] {
+
+		&>#content-2:target,
+		&>#content-3:target,
+		&>#content-4:target,
+		&>#content-5:target {
+			&~.whatLocalization__links>a[href='#content-1'] {
 				background-color: #e9e9e9 !important;
 				color: #aaaaaa !important;
+
 				&:before {
 					background-color: #e9e9e9 !important;
 				}
-				& > .whatLocalization__mark {
+
+				&>.whatLocalization__mark {
 					@media screen and (max-width: 991px) {
 						// content: '+';
 						color: #ffffff;
@@ -420,6 +433,7 @@
 						border-color: #01d1ff;
 						text-align: center;
 					}
+
 					border-color: #aaaaaa !important;
 
 					&:before {
@@ -435,6 +449,7 @@
 						bottom: 0;
 						margin: auto;
 					}
+
 					@media screen and (max-width: 991px) {
 						content: '+';
 						color: #ffffff;
@@ -444,25 +459,25 @@
 				}
 			}
 
-			& ~ #content-0 {
+			&~#content-0 {
 				display: none;
 			}
 		}
 	}
 
-	&__tabs > #content-1:target {
-		& ~ #content-0 {
+	&__tabs>#content-1:target {
+		&~#content-0 {
 			display: none;
 		}
 	}
 
-	&__tabs > div:not(.whatLocalization__links) {
+	&__tabs>div:not(.whatLocalization__links) {
 		display: none;
 		order: 1;
 		flex-grow: 1;
 	}
 
-	&__tabs > div:target {
+	&__tabs>div:target {
 		display: block;
 		opacity: 1;
 		transition: all 0.3s;
@@ -503,9 +518,11 @@
 			z-index: 2;
 			font-size: 20px;
 		}
+
 		@media screen and (max-width: 940px) {
 			height: 100%;
 		}
+
 		@media screen and (max-width: 500px) {
 			font-size: 14px;
 		}
