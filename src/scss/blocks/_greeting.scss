@@ -10,7 +10,7 @@
 
 .greeting__heading {
 	font-weight: 900;
-	font-size: 33px;
+	font-size: fluid(34, 140);
 	line-height: 1.07;
 	text-transform: uppercase;
 	color: #01D1FF;
@@ -32,7 +32,7 @@
 .greeting__text {
 	font-style: normal;
 	font-weight: 300;
-	font-size: 14px;
+	font-size: fluid(14, 40);
 	line-height: 1.2;
 	text-transform: uppercase;
 
