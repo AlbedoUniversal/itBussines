@@ -10,12 +10,9 @@
 
 .greeting__heading {
 	font-weight: 900;
-
-	font-size: 35px;
+	font-size: fluid(34, 140);
 	line-height: 1.07;
-
 	text-transform: uppercase;
-
 	color: #01D1FF;
 	margin-bottom: 8px;
 
@@ -35,7 +32,7 @@
 .greeting__text {
 	font-style: normal;
 	font-weight: 300;
-	font-size: 16px;
+	font-size: fluid(14, 40);
 	line-height: 1.2;
 	text-transform: uppercase;
 
@@ -55,7 +52,7 @@
 	display: flex;
 	flex-wrap: wrap;
 	margin-bottom: 66px;
-	gap: 25px;
+	gap: fluid(15, 50);
 
 	@include respond-above('700') {
 		gap: fluid(25, 99);
@@ -66,37 +63,19 @@
 
 .advantages__item {
 	max-width: 720px;
-	// @include respond-above('700') {
-	// 	max-width: fluid(264, 620, 700);
-	// }
-
 }
 
 .advantages__item:not(:last-child) {
 	display: flex;
-	align-items: center;
+	align-items: start;
 	justify-content: space-between;
-	flex-basis: 100%;
-
-	@include respond-above('700') {
-		align-items: start;
-	}
-
-	@include respond-above('1024') {
-		flex-basis: auto;
-		justify-content: start;
-	}
-
 }
 
 .advantages__group {
-	@include respond-above('1024') {
-		max-width: 272px;
+	max-width: fluid(120, 500);
 
-	}
-
-	@include respond-above('1350') {
-		max-width: fluid(272, 500, 1350);
+	@include respond-above('700') {
+		max-width: fluid(272, 500, 700);
 
 	}
 
@@ -106,21 +85,21 @@
 
 .advantages__title {
 	font-weight: 800;
-	font-size: 21px;
+	font-size: fluid(14, 40);
 	line-height: 1.2;
 	text-transform: uppercase;
-	margin-bottom: 15px;
+	margin-bottom: 10px;
 	color: #FFFFFF;
 
 	@include respond-above('700') {
 		font-size: fluid(22, 60, 700);
-
+		margin-bottom: 15px;
 	}
 }
 
 .advantages__text {
 	font-weight: 400;
-	font-size: 15px;
+	font-size: fluid(11, 22);
 	line-height: 1.2;
 
 	color: #FFFFFF;
@@ -135,6 +114,7 @@
 .advantages__svg {
 	min-width: 19px;
 	margin-left: 10px;
+	height: 45px;
 	flex-shrink: 0;
 
 	@include respond-above('700') {
@@ -156,17 +136,20 @@
 	text-align: center;
 	border: 0;
 	font-weight: 600;
-	font-size: 17px;
+	font-size: 15px;
 	line-height: 1.4;
 	text-transform: uppercase;
 	color: #FFFFFF;
 	background: #01D1FF;
 	border-radius: 50px;
-	padding: 15px;
-	margin-bottom: 132px;
+	padding: 13px;
+	margin-bottom: 80px;
+	width: 100%;
 
 
-	@include respond-above('700') {
+	@include respond-above('450') {
+		width: auto;
+		margin-bottom: 132px;
 		font-size: fluid(16, 25);
 		padding-inline: fluid(16, 30);
 		padding-block: fluid(11, 24);
