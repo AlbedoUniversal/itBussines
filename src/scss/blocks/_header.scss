@@ -64,13 +64,13 @@
 
 .header__button-row {
 	height: 8px;
-	background: white;
+	background: #01D1FF;
 	border-radius: 10px;
 	width: 100%;
 
 	&--open {
 
-		background: #01D1FF;
+		background: white;
 	}
 
 }
@@ -87,7 +87,11 @@
 	transform: translateX(100%);
 	transition: transform 200ms ease-in;
 
-	@include respond-above('700') {
+	@include respond-above('701') {
+		width: 500px;
+	}
+
+	@include respond-above('1981') {
 		width: 700px;
 	}
 
