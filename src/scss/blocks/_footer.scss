@@ -6,14 +6,10 @@
 	padding-left: fluid(20, 339, 350);
 
 	display: flex;
-	flex-direction: column;
 	align-items: start;
 	gap: 40px;
+	justify-content: space-between;
 
-	@include respond-above('600') {
-		justify-content: space-between;
-		flex-direction: row;
-	}
 
 	&__credit {
 		display: flex;
@@ -75,25 +71,18 @@
 	}
 
 	&__logo {
-		width: 272px;
-		height: 79px;
+		width: 100px;
+
 		object-fit: contain;
 
 		@include respond-above(2000) {
-			width: 352px;
-			height: 105px;
+			width: 200px;
 
 		}
 	}
 
 	&__logo-container {
-		align-self: start;
-
-
-		@include respond-above('600') {
-			align-self: end;
-		}
-
+		align-self: end;
 	}
 
 }

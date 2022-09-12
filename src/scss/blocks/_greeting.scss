@@ -1,9 +1,9 @@
 .greeting {
-	padding-top: 110px;
+	padding-top: 80px;
 	padding-bottom: 25px;
 
 	@include respond-above('700') {
-		padding-top: 133px;
+		padding-top: 110px;
 
 	}
 }
@@ -20,7 +20,7 @@
 	margin-bottom: 8px;
 
 	@include respond-above('700') {
-		font-size: fluid(50, 150);
+		font-size: fluid(55, 150);
 
 	}
 
@@ -30,9 +30,7 @@
 	}
 }
 
-.white {
-	color: white;
-}
+
 
 .greeting__text {
 	font-style: normal;
@@ -42,13 +40,14 @@
 	text-transform: uppercase;
 
 	color: #FFFFFF;
-	max-width: 970px;
+
 
 	padding-bottom: 80px;
 
 	@include respond-above('700') {
-		font-size: fluid(22, 45);
-		padding-bottom: 110px;
+		font-size: fluid(16, 42);
+		padding-bottom: 100px;
+		width: min(70%, 1100px);
 	}
 }
 
@@ -86,7 +85,6 @@
 	@include respond-above('1024') {
 		flex-basis: auto;
 		justify-content: start;
-
 	}
 
 }
@@ -128,14 +126,11 @@
 	color: #FFFFFF;
 
 	@include respond-above('700') {
-		font-size: fluid(16, 23);
-
+		font-size: fluid(15, 22);
 	}
 }
 
-.flex {
-	display: flex;
-}
+
 
 .advantages__svg {
 	min-width: 19px;
@@ -156,28 +151,25 @@
 }
 
 .greeting__button {
-	display: block;
+	display: inline-block;
 	background: transparent;
-	padding: 0;
 	text-align: center;
 	border: 0;
-	width: 100%;
-	font-weight: 500;
-	font-size: 15px;
+	font-weight: 600;
+	font-size: 17px;
 	line-height: 1.4;
 	text-transform: uppercase;
 	color: #FFFFFF;
 	background: #01D1FF;
 	border-radius: 50px;
-	padding: 11px;
+	padding: 15px;
 	margin-bottom: 132px;
 
 
 	@include respond-above('700') {
 		font-size: fluid(16, 25);
-		padding: fluid(11, 24);
-		width: 360px;
-
+		padding-inline: fluid(16, 30);
+		padding-block: fluid(11, 24);
 	}
 
 	@include respond-above('900') {
@@ -195,4 +187,12 @@
 
 .greeting__link {
 	text-decoration: underline;
+}
+
+.flex {
+	display: flex;
+}
+
+.white {
+	color: white;
 }

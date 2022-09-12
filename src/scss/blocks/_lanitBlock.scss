@@ -1,7 +1,7 @@
 .lanitBlock {
 	@include container;
-	margin-top: 50px;
-	margin-bottom: 50px;
+	padding: 50px 0;
+
 	padding-left: fluid(90, 339);
 	padding-right: fluid(90, 339);
 
@@ -75,6 +75,7 @@
 			flex: 0 1 100%;
 			min-height: 174px;
 		}
+
 		@media screen and (max-width: 470px) {
 			min-height: 212px;
 		}
@@ -127,6 +128,7 @@
 		@include respond-above(1980) {
 			font-size: fluid(20, 25);
 		}
+
 		@media screen and (max-width: 1300px) {
 			font-size: 15px;
 		}

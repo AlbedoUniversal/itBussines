@@ -1,7 +1,9 @@
 .forWho {
 	@include container;
-	margin-top: 50px;
-	margin-bottom: 50px;
+
+	padding: 50px 0;
+
+
 	&__heading {
 		font-weight: 900;
 		@include font(fluid(20, 50), 900, 1.44, #0a0a0a);
@@ -9,6 +11,7 @@
 		text-transform: uppercase;
 		margin-bottom: 20px;
 	}
+
 	&__subheading {
 		font-weight: 300;
 		text-align: center;
