@@ -20,12 +20,16 @@
 }
 
 .header__logo {
-	max-height: 80px;
-
+	width: 169px;
 	object-fit: contain;
 
-	@include respond-above('950') {
-		max-height: 92px;
+	@include respond-above('700') {
+		width: fluid(198, 340);
+	}
+
+	@include respond-above('1980') {
+		width: 352px;
+		height: 102px;
 	}
 }
 

@@ -6,13 +6,17 @@
 }
 
 .consult {
-	@include container;
-	padding-top: 50px;
-	padding-bottom: 50px;
+	max-width: 2560px;
+	margin: 0 auto;
+	padding-top: fluid(50, 260);
+	padding-bottom: fluid(140, 400);
+
+	padding-right: fluid(30, 240, 700);
+	padding-left: fluid(30, 240, 700);
 
 	&__container {
 		display: flex;
-		gap: fluid(40, 60);
+		gap: fluid(80, 384);
 		flex-direction: column;
 
 		align-items: center;
@@ -28,7 +32,7 @@
 	}
 
 	&__heading {
-		@include font(fluid(20, 50), 900, 1.44, #ffffff);
+		@include font(fluid(30, 70), 900, 1.44, #ffffff);
 
 		text-transform: uppercase;
 		text-align: center;
@@ -43,12 +47,12 @@
 		flex-direction: column;
 		gap: 37px;
 
-		@include respond-above('720') {
-			max-width: 660px;
+		@include respond-above('700') {
+			max-width: 560px;
 		}
 
 		@include respond-above('1900') {
-			max-width: 800px;
+			max-width: 760px;
 		}
 	}
 
@@ -93,23 +97,20 @@
 	}
 
 	&__button {
-		@include font(18px, 700, 1.2, white);
+		display: inline-block;
+		@include font(fluid(18, 35), 700, 1.2, white);
 		background-color: #01d1ff;
 		min-width: 264px;
 		text-transform: uppercase;
-		padding: 20px 0;
+		padding: fluid(20, 40);
 		border-radius: 80px;
-		flex-basis: 100%;
 		border: none;
 		outline: none;
 		cursor: pointer;
+		width: 100%;
 
 		@include respond-above('720') {
-			font-size: 25px;
-			padding: 30px 0;
-			flex-basis: 48%;
-			max-width: 373px;
-			flex-shrink: 0;
+			width: auto;
 		}
 
 
@@ -144,12 +145,10 @@
 	}
 
 	&__label-text {
-		@include font(16px, 500, 1.2, white);
+		@include font(fluid(14, 20), 500, 1.2, white);
 		border-radius: 80px;
 
-		@include respond-above('1440') {
-			font-size: 22px;
-		}
+
 	}
 }
 
@@ -157,22 +156,13 @@
 	position: relative;
 	width: 100%;
 	display: block;
-	@include font(18px, 500, 1.2, white);
-	padding: 20px;
+	@include font(fluid(18, 35) 500, 1.2, white);
 	background-color: transparent;
 	border: 2px solid #ffffff;
 	border-radius: 80px;
 	outline: none;
+	padding: fluid(20, 45);
 
-	@include respond-above('720') {
-		font-size: 25px;
-		padding: 30px;
-	}
-
-	@include respond-above('1980') {
-		font-size: fliud(20, 35);
-		padding: fliud(40, 46);
-	}
 }
 
 .relative {
