@@ -2,13 +2,14 @@
 	@include container;
 
 	padding: 50px 0;
-
+	padding-top: 75px;
 
 	&__heading {
 		font-weight: 900;
 		@include font(fluid(20, 50), 900, 1.44, #0a0a0a);
 		text-align: center;
 		text-transform: uppercase;
+		margin-bottom: 5px;
 	}
 
 	&__subheading {
