@@ -21,9 +21,13 @@
 	padding-top: 80px;
 	padding-bottom: 50px;
 
+	@media screen and (max-width: 768px) {
+		background-image: url('@img/bg-mobile.jpg');
+	}
+
 	@media screen and (max-width: 600px) {
 		br {
-			display: none;
+			// display: none;
 		}
 	}
 
@@ -87,20 +91,6 @@
 			padding-left: 30px;
 			gap: 3rem;
 		}
-
-		&:not(:last-child) {
-			.processBlock__road-item:after {
-				position: absolute;
-				content: '';
-				width: 80%;
-				height: 20px;
-				top: 50%;
-				left: 35%;
-				background-repeat: repeat;
-				background-size: 90px 21px;
-				background-image: radial-gradient(circle, #ffffff 5px, transparent 3px);
-			}
-		}
 	}
 
 	&__road-item {
@@ -124,7 +114,7 @@
 			}
 		}
 
-		&:not(:last-child) {
+		&:not(:nth-child(5)) {
 			.processBlock__road-number:after {
 				position: absolute;
 				content: '';
