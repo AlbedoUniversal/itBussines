@@ -35,15 +35,12 @@
 	font-size: fluid(14, 40);
 	line-height: 1.2;
 	text-transform: uppercase;
-
 	color: #FFFFFF;
 
-
-	padding-bottom: 80px;
+	padding-bottom: 60px;
 
 	@include respond-above('700') {
 		font-size: fluid(16, 42);
-		padding-bottom: 100px;
 		width: min(70%, 1100px);
 	}
 }

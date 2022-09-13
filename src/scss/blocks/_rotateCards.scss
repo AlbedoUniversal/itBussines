@@ -3,6 +3,7 @@
 	padding-bottom: fluid(55, 140);
 	background-image: url('@img/backgroundCards.jpeg');
 	background-size: cover;
+
 	&__content {
 		@include container;
 		display: flex;
@@ -20,6 +21,7 @@
 			flex-direction: column;
 		}
 	}
+
 	&__container {
 		text-align: center;
 		-webkit-perspective: 1200;
@@ -36,11 +38,13 @@
 			.rotateCards__ball:nth-child(2) {
 				background-color: #c6c6c6;
 			}
+
 			.rotateCards__ball:nth-child(1) {
 				background-color: transparent;
 			}
 		}
 	}
+
 	&__flipper {
 		position: relative;
 		width: 500px;
@@ -58,23 +62,29 @@
 			width: 430px;
 			height: 430px;
 		}
+
 		@media screen and (max-width: 991px) {
 			width: 350px;
 			height: 350px;
 		}
+
 		@media screen and (max-width: 768px) {
 			width: 90%;
 		}
+
 		@media screen and (max-width: 470px) {
 			height: 430px;
 		}
+
 		@media screen and (max-width: 380px) {
 			height: 460px;
 		}
+
 		@media screen and (max-width: 352px) {
 			height: 470px;
 		}
 	}
+
 	&__front,
 	&__back {
 		display: flex;
@@ -91,10 +101,12 @@
 		-webkit-backface-visibility: hidden;
 		-moz-backface-visibility: hidden;
 		backface-visibility: hidden;
+
 		@media screen and (max-width: 991px) {
 			padding: 30px;
 		}
 	}
+
 	&__front {
 		z-index: 2;
 		-webkit-transform: rotateY(0deg);
@@ -106,6 +118,7 @@
 		border-bottom: 1px solid #f5f5f5;
 		justify-content: start;
 		padding-top: 8rem;
+
 		&::after {
 			content: '';
 			width: 60px;
@@ -122,39 +135,43 @@
 			}
 		}
 	}
+
 	h3 {
 		font-size: 16px;
 		line-height: 20px;
 		text-transform: uppercase;
+
 		// margin: 20px 0 15px 0;
 		@media screen and (max-width: 768px) {
 			padding-right: 100px;
 			text-align: left;
 		}
+
 		@media screen and (max-width: 420px) {
 			padding-right: 50px;
 			text-align: left;
 		}
+
 		@media screen and (max-width: 380px) {
 			padding-right: 20px;
 		}
 	}
 
 	&__header {
-		flex-basis: 30%;
+		flex-basis: 24%;
 	}
 
 	&__header h3 {
 		text-align: left;
 		font-weight: 300;
-		font-size: 74px;
+		font-size: 43px;
 		line-height: 60px;
 		text-transform: uppercase;
 
 		color: #000000;
 
-		@media screen and (max-width: 991px) {
-			font-size: 35px;
+		@media screen and (min-width: 991px) {
+			font-size: 74px;
 		}
 	}
 
@@ -167,6 +184,7 @@
 		font-size: 15px;
 		line-height: 1.2;
 		position: relative;
+
 		@media screen and (max-width: 991px) {
 			font-size: 13px;
 		}
@@ -182,22 +200,22 @@
 			top: 5px;
 		}
 	}
+
 	&__front p {
 		text-align: left;
 		font-weight: 900;
-		font-size: 43px;
+		font-size: 24px;
 		line-height: 1.2;
 		text-transform: uppercase;
 
 		color: #000000;
 
-		@media screen and (max-width: 1400px) {
-			line-height: 43px;
+		@media screen and (min-width: 1400px) {
 			font-size: 33px;
 		}
-		@media screen and (max-width: 991px) {
-			line-height: 1.4;
-			font-size: 18px;
+
+		@include respond-above('991') {
+			font-size: 28px;
 		}
 	}
 
@@ -228,6 +246,7 @@
 			border-radius: 60px;
 			top: 30px;
 			right: 50px;
+
 			@media screen and (max-width: 380px) {
 				top: 20px;
 				right: 40px;
@@ -239,6 +258,7 @@
 			}
 		}
 	}
+
 	&__back h3 {
 		position: relative;
 		font-family: Gilroy;
@@ -266,16 +286,20 @@
 		@media screen and (max-width: 1400px) {
 			font-size: 15px;
 		}
+
 		@media screen and (max-width: 1200px) {
 			margin-bottom: 20px;
 		}
+
 		@media screen and (max-width: 991px) {
 			font-size: 11px;
 		}
+
 		@media screen and (max-width: 768px) {
 			font-size: 16px;
 			margin-bottom: 4px;
 		}
+
 		@media screen and (max-width: 470px) {
 			font-size: 12px;
 		}
@@ -287,6 +311,7 @@
 		-ms-transform: rotateY(180deg);
 		transform: rotateY(180deg);
 	}
+
 	&__text {
 		font-size: 20px;
 		font-weight: 300;
@@ -322,6 +347,7 @@
 			height: 25px;
 			width: 25px;
 		}
+
 		&:nth-child(2) {
 			background-color: transparent;
 		}
