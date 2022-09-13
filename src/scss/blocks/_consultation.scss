@@ -103,7 +103,7 @@
 
 	&__button {
 		display: inline-block;
-		@include font(fluid(18, 35), 700, 1.2, white);
+		@include font(fluid(18, 30), 700, 1.2, white);
 		background-color: #01d1ff;
 		min-width: 264px;
 		text-transform: uppercase;
@@ -161,7 +161,7 @@
 	position: relative;
 	width: 100%;
 	display: block;
-	@include font(fluid(18, 35) 500, 1.2, white);
+	@include font(fluid(18, 30) 500, 1.2, white);
 	background-color: transparent;
 	border: 2px solid #ffffff;
 	border-radius: 80px;
