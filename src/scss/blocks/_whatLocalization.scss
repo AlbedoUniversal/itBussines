@@ -585,16 +585,16 @@
 	&__list-item {
 		margin: 0;
 		position: relative;
-        list-style-type: none;
-        font-size: clamp(0.938rem, 0.889rem + 0.192vw, 1.25rem);
-        position: relative;
+		list-style-type: none;
+		font-size: clamp(0.938rem, 0.889rem + 0.192vw, 1.25rem);
+		position: relative;
 
 		&:before {
-            content: '\2022';
-            font-size: 31px;
-            position: absolute;
-            left: -14px;
-            top: -6px;
+			content: '\2022';
+			font-size: 31px;
+			position: absolute;
+			left: -14px;
+			top: -6px;
 
 			@media screen and (max-width: 500px) {
 				width: 8px;
@@ -633,8 +633,8 @@
 	}
 
 	@media screen and (min-width: 991px) {
-	    $__heading {
-	        font-size: 46px;
-	    }
+		&__heading {
+			font-size: 46px;
+		}
 	}
 }
