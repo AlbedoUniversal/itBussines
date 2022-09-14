@@ -352,4 +352,24 @@
 			background-color: transparent;
 		}
 	}
+
+	@media screen and (max-width: 991px) {
+        &__header {
+            flex-basis: 24%;
+        }
+
+        &__header h3 {
+            font-size: 43px;
+        }
+
+        &__front p {
+            font-size: 28px;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        &__front p {
+            font-size: 28px;
+        }
+    }
 }

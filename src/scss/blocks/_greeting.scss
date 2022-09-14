@@ -45,6 +45,12 @@
 	}
 }
 
+@media (max-width: 768px) {
+    .greeting__text {
+        padding-bottom: 60px;
+    }
+}
+
 .advantages {
 	display: flex;
 	flex-wrap: wrap;
@@ -60,6 +66,7 @@
 
 .advantages__item {
 	max-width: 720px;
+	padding-bottom: 20px;
 }
 
 .advantages__item:not(:last-child) {

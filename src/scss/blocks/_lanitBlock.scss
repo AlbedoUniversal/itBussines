@@ -11,6 +11,7 @@
     text-transform: uppercase;
     text-align: center;
     margin-bottom: fluid(70, 140);
+    font-size: clamp(1.25rem, 0.962rem + 2.2vw, 3.125rem);
   }
 
   &__cards {
@@ -51,5 +52,11 @@
 
   &__card-description {
     @include font(fluid(15, 27), 300, 1.2, #474747);
+  }
+
+  @media screen and (min-width: 991px) {
+    $__heading {
+        font-size: 46px;
+    }
   }
 }

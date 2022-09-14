@@ -41,6 +41,7 @@
 
     text-transform: uppercase;
     text-align: center;
+    font-size: clamp(1.25rem, 0.962rem + 2.2vw, 3.125rem);
 
     @include respond-above("1100") {
       text-align: start;
@@ -107,12 +108,12 @@
     background-color: #01d1ff;
     min-width: 264px;
     text-transform: uppercase;
-    padding: fluid(20, 40);
     border-radius: 80px;
     border: none;
     outline: none;
     cursor: pointer;
     width: 100%;
+    padding: clamp(1.25rem, 0.469vw, 2.5rem);
 
     @include respond-above("720") {
       width: auto;
@@ -151,18 +152,25 @@
     @include font(fluid(14, 20), 500, 1.2, white);
     border-radius: 80px;
   }
+
+  @media screen and (min-width: 991px) {
+    $__heading {
+        font-size: 46px;
+    }
+  }
 }
 
 .consult__input {
   position: relative;
   width: 100%;
   display: block;
-  @include font(fluid(18, 30), 500, 1.2, white);
   background-color: transparent;
   border: 2px solid #ffffff;
   border-radius: 80px;
   outline: none;
-  padding: fluid(20, 45);
+  padding: clamp(1.25rem, 1.01rem + 0.262vw, 2.813rem);
+  color: #fff;
+  font-size: 1.5em;
 }
 
 .relative {

@@ -68,7 +68,7 @@
   }
 
   &__logo {
-    width: 151px;
+    width: 200px;
     object-fit: contain;
     @include respond-above("700") {
       width: 238px;

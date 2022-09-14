@@ -84,6 +84,7 @@
 		text-transform: uppercase;
 		text-align: center;
 		margin-bottom: fluid(15, 40);
+		font-size: clamp(1.25rem, 0.962rem + 2.2vw, 3.125rem);
 
 		@media screen and (max-width: 1200px) {
 			margin-bottom: 0px;
@@ -584,18 +585,16 @@
 	&__list-item {
 		margin: 0;
 		position: relative;
+        list-style-type: none;
+        font-size: clamp(0.938rem, 0.889rem + 0.192vw, 1.25rem);
+        position: relative;
 
 		&:before {
-			content: '\2022';
-			font-size: 31px;
-			position: absolute;
-			left: -14px;
-			top: -8px;
-			width: 11px;
-			height: 11px;
-			background-color: #ffffff;
-			content: '';
-			border-radius: 100%;
+            content: '\2022';
+            font-size: 31px;
+            position: absolute;
+            left: -14px;
+            top: -6px;
 
 			@media screen and (max-width: 500px) {
 				width: 8px;
@@ -631,5 +630,11 @@
 		img {
 			width: 30px;
 		}
+	}
+
+	@media screen and (min-width: 991px) {
+	    $__heading {
+	        font-size: 46px;
+	    }
 	}
 }
