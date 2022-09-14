@@ -1,5 +1,20 @@
 export function tabs() {
 	// const cross = document.querySelector('.whatLocalization__cross');
+	let hashAddress = window.location.hash;
+	if (hashAddress && hashAddress.length > 0) {
+		let hasAddressItemID = hashAddress.substring(1);
+		if (hasAddressItemID) {
+			let contentElement = document.querySelector('#'+hasAddressItemID);
+			if (contentElement) {
+				let cross = contentElement.querySelector('.whatLocalization__cross');
+				if (cross) {
+					console.log(cross);
+					cross.style.opacity = 1;
+				}
+			}
+		}
+	}
+
 	const crosses = document.querySelectorAll('.whatLocalization__cross');
 
 	const text = document.querySelectorAll('.whatLocalization__text');
