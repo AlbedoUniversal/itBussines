@@ -1,88 +1,84 @@
 .footer {
-	@include container;
+  @include container;
 
-	padding-bottom: fluid(30, 68, 350);
-	padding-right: fluid(20, 321, 350);
-	padding-left: fluid(20, 339, 350);
+  padding-bottom: fluid(30, 68, 350);
+  padding-right: fluid(20, 321, 350);
+  padding-left: fluid(20, 339, 350);
 
-	display: flex;
-	align-items: start;
-	gap: 40px;
-	justify-content: space-between;
+  display: flex;
+  align-items: start;
+  gap: 40px;
+  justify-content: space-between;
 
+  &__credit {
+    display: flex;
+    flex-direction: column;
 
-	&__credit {
-		display: flex;
-		flex-direction: column;
+    @include respond-above(960) {
+      gap: 50px;
+      flex-direction: row;
+    }
+  }
 
-		@include respond-above(960) {
-			gap: 50px;
-			flex-direction: row;
-		}
-	}
+  &__info {
+    @include respond-above(960) {
+      order: -1;
+    }
+  }
 
-	&__info {
-		@include respond-above(960) {
-			order: -1;
-		}
-	}
+  &__info-item {
+    @include font(fluid(10, 20), 500, 1.2, white);
+  }
 
-	&__info-item {
-		@include font(fluid(10, 20), 500, 1.2, white);
-	}
+  &__info-item:not(:last-child) {
+    margin-bottom: 16px;
 
-	&__info-item:not(:last-child) {
-		margin-bottom: 16px;
+    @include respond-above(960) {
+      margin-bottom: 50px;
+    }
+  }
 
-		@include respond-above(960) {
-			margin-bottom: 50px;
+  &__link-with-icon {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    margin-bottom: 19px;
 
-		}
-	}
+    @include respond-above(960) {
+      margin-bottom: 0px;
+    }
+  }
 
-	&__link-with-icon {
-		display: flex;
-		gap: 25px;
-		align-items: center;
-		margin-bottom: 19px;
+  &__link-with-icon:not(:last-child) {
+    @include respond-above(960) {
+      margin-bottom: 30px;
+    }
+  }
 
-		@include respond-above(960) {
-			margin-bottom: 0px;
-		}
-	}
+  &__link {
+    @include font(fluid(10, 20), 500, 1.2, white);
 
-	&__link-with-icon:not(:last-child) {
-		@include respond-above(960) {
-			margin-bottom: 30px;
+    &--underline {
+      text-decoration: underline;
+    }
 
-		}
-	}
+    :hover {
+      transform: scale(1.1);
+    }
+  }
 
-	&__link {
-		@include font(fluid(10, 20), 500, 1.2, white);
+  &__logo {
+    width: 151px;
+    object-fit: contain;
+    @include respond-above("700") {
+      width: 238px;
+    }
+    @include respond-above("2000") {
+      width: 352px;
+    }
+  }
 
-		&--underline {
-			text-decoration: underline;
-		}
-
-		:hover {
-			transform: scale(1.1)
-		}
-	}
-
-	&__logo {
-		width: 100px;
-
-		object-fit: contain;
-
-		@include respond-above(2000) {
-			width: 200px;
-
-		}
-	}
-
-	&__logo-container {
-		align-self: end;
-	}
-
+  &__logo-container {
+    align-self: end;
+  }
 }

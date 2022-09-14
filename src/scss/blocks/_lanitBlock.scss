@@ -1,71 +1,55 @@
 .lanitBlock {
-	@include container;
-	padding-top: fluid(25, 116);
-	padding-bottom: fluid(100, 280);
+  @include container;
+  padding-top: fluid(25, 116);
+  padding-bottom: fluid(100, 280);
 
+  padding-left: fluid(30, 240);
+  padding-right: fluid(30, 240);
 
-	padding-left: fluid(30, 240);
-	padding-right: fluid(30, 240);
+  &__heading {
+    @include font(fluid(22, 75), 900, 1.44, black);
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: fluid(70, 140);
+  }
 
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: fluid(30, 60);
+    justify-content: center;
+  }
 
+  &__card {
+    display: flex;
+    flex-direction: column;
+    background-color: #eaeaea;
+    border-radius: 20px;
+    padding: 40px;
+    transition: box-shadow 0.3s;
 
-	&__heading {
-		@include font(fluid(22, 75), 900, 1.44, black);
-		text-transform: uppercase;
-		text-align: center;
-		margin-bottom: fluid(70, 140);
-	}
+    width: 100%;
+    @include respond-above("1300") {
+      width: fluid(348, 576, 1200);
+    }
 
-	&__cards {
-		display: flex;
-		flex-wrap: wrap;
-		gap: fluid(30, 60);
-		justify-content: center;
+    &:hover {
+      box-shadow: 0 0 15px 1px #8c8c8c91;
+    }
+  }
 
-	}
+  &__card-header {
+    @include font(fluid(40, 100), 900, 1, #474747);
+    text-transform: uppercase;
+  }
 
-	&__card {
-		display: flex;
-		flex-direction: column;
-		background-color: #eaeaea;
-		border-radius: 20px;
-		padding: 40px;
-		transition: box-shadow 0.3s;
+  &__card-subheader {
+    @include font(fluid(18, 30), 900, 1.26, #474747);
+    margin-bottom: fluid(18, 24);
+    text-transform: uppercase;
+  }
 
-
-		width: min(90%, 480px);
-
-		@include respond-above('500') {
-			min-height: 220px;
-		}
-
-		@include respond-above('1050') {
-			max-width: fluid(440, 575, 1050);
-			min-height: 263px;
-		}
-
-		@include respond-above('2100') {
-			width: min(90%, 540px);
-		}
-
-
-		&:hover {
-			box-shadow: 0 0 15px 1px #8c8c8c91;
-		}
-	}
-
-	&__card-header {
-		@include font(fluid(40, 100), 900, 1, #474747);
-		text-transform: uppercase;
-	}
-
-	&__card-subheader {
-		@include font(fluid(18, 33), 900, 1.26, #474747);
-		margin-bottom: fluid(18, 24);
-		text-transform: uppercase;
-	}
-
-	&__card-description {
-		@include font(fluid(15, 30), 300, 1.2, #474747);
-	}
+  &__card-description {
+    @include font(fluid(15, 27), 300, 1.2, #474747);
+  }
 }
