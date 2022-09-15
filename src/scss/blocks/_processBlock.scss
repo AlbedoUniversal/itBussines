@@ -224,8 +224,8 @@
 
 	&__road-description {
 		font-weight: 500;
-		font-size: 25px;
-		line-height: 30px;
+        font-size: 13px;
+        line-height: 20px;
 
 		color: #ffffff;
 		word-wrap: nowrap;
@@ -299,4 +299,18 @@
 			font-size: 46px;
 		}
 	}
+
+	&__road-item:first-child &__road-heading {
+        margin-bottom: 89px;
+    }
+
+    @media screen and (max-width: 991px) {
+        &__road-item:first-child &__road-heading {
+            margin-bottom: 10px;
+        }
+
+        &__road-heading {
+            margin-bottom: 9px;
+        }
+    }
 }

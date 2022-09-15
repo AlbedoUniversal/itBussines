@@ -37,6 +37,7 @@
 		&:hover {
 			box-shadow: 0 0 15px 1px #8c8c8c91;
 		}
+
 	}
 
 	&__card-header {
@@ -59,4 +60,19 @@
 			font-size: 46px;
 		}
 	}
+
+	@media screen and (min-width: 992px) {
+        &__card {
+            width: clamp(266px, 30%, 500px);
+        }
+        &__road-description {
+            max-width: 300px;
+        }
+    }
+
+    @media screen and (max-width: 991px) {
+        $__card {
+            max-width: clamp(300px, 90vw, 90%);
+        }
+    }
 }
